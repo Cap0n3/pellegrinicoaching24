@@ -40,13 +40,17 @@ function FeatLayout({
 }
 
 
-type DefaultFeaturesProps = {}
+type DefaultFeaturesProps = {
+	contrast?: boolean;
+}
 
-export default function DefaultFeatures({ }: DefaultFeaturesProps) {
+export default function DefaultFeatures({ 
+	contrast = false
+}: DefaultFeaturesProps) {
 	const t = useTranslations("HomePage");
 
 	return (
-		<section className="w-full flex items-center justify-center px-10 py-10 lg:px-20 lg:py-20">
+		<section className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}>
 			<div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
 				<FeatLayout 
 					logo={<Eye size={30} />}

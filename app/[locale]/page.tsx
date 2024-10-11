@@ -11,6 +11,7 @@ import FAQSection from "@/components/FAQ";
 import { useTranslations } from "next-intl";
 import About from "./about/page";
 import AboutSection from "@/components/AboutSection";
+import SocialProof from "@/components/SocialProof";
 
 export default function Home() {
     const t = useTranslations("HomePage");
@@ -19,7 +20,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center justify-center dark:bg-gray-800">
             <ScrollResetter />
             <Hero />
-            <DefaultFeatures />
+            <DefaultFeatures contrast />
             <VisualTextSection
                 id="feature1"
                 imageLink="/images/showcase_one_optimized.webp"
@@ -32,6 +33,7 @@ export default function Home() {
                 title={t("showcase-two.title")}
                 paragraph={t("showcase-two.description")}
                 inverted
+                contrast
             />
             <VisualTextSection
                 id="feature3"
@@ -45,10 +47,12 @@ export default function Home() {
                 title={t("showcase-four.title")}
                 paragraph={t("showcase-four.description")}
                 inverted
+                contrast
             />
-            <Testimonials contrast />
             <Parallax title="Prenez rendez-vous dès maintenant" cta="YES" />
             <AboutSection />
+            <SocialProof contrast />
+            <Testimonials />
             <FAQSection
                 id="faq"
                 title={"FAQ"}
