@@ -1,0 +1,177 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "about": "About",
+        "booking": "Booking",
+        "contact": "Contact",
+        "srMenu": "Toggle navigation menu",
+        "srLogo": "Acme Inc"
+    },
+    "HomePage": {
+        "title": "Welcome to our site",
+        "description": "This is a description of our site",
+        "cta": "Learn more",
+        "ariaLabel": "Hero header of the home page",
+        "features": {
+            "feature-one": {
+                "title": "Stimulating awareness",
+                "description": "I help you to overcome your blockages, identify your resistance and act more effectively using emotional and creative tools."
+            },
+            "feature-two": {
+                "title": "A safe place",
+                "description": "I create a confidential, caring and non-judgmental space, conducive to raising awareness and finding solutions tailored to your needs."
+            },
+            "feature-three": {
+                "title": "Artistic development",
+                "description": "I'll help you overcome your creative blocks, deconstruct impostor syndrome and assert your true artistic identity."
+            },
+            "feature-four": {
+                "title": "A holistic vision",
+                "description": "My approach, based on the 5 forms of intelligence and advances in neuroscience, reveals your deepest needs and guides you towards lasting solutions."
+            }
+        },
+        "showcase-one": {
+            "title": "Discover our services",
+            "description": "This is a presentation paragraph of our services, the revolution is underway! Our services are at the cutting edge of technology and have the potential to change your life!"
+        },
+        "showcase-two": {
+            "title": "Let's have a coffee",
+            "description": "Come have a coffee with us and discuss your projects. We are waiting for you!"
+        },
+        "showcase-three": {
+            "title": "Meet the mastermind of the team",
+            "description": "Here is the mastermind behind our team, he is as nice as he is brilliant! We can't wait to meet you!"
+        },
+        "testimonials": {
+            "testimonial-one": {
+                "image": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU",
+                "quote": "This service changed my life, I couldn't do without it anymore!",
+                "author": "Jean Dupont",
+                "role": "Director",
+                "rating": "5.0"
+            },
+            "testimonial-two": {
+                "image": "https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg",
+                "quote": "A quality service, I highly recommend it! Frankly, it's great!",
+                "author": "Marie Martin",
+                "role": "Project Manager",
+                "rating": "5.0"
+            },
+            "testimonial-three": {
+                "image": "https://fastly.picsum.photos/id/177/2515/1830.jpg?hmac=G8-2Q3-YPB2TreOK-4ofcmS-z5F6chIA0GHYAe5yzDY",
+                "quote": "Exceptional, I am blown away by the quality of this service! I clearly made the right choice!",
+                "author": "Pierre Durand",
+                "role": "Developer",
+                "rating": "5.0"
+            },
+            "testimonial-four": {
+                "image": "https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg",
+                "quote": "Not bad, I must say I am pleasantly surprised by this service! One small downside however...",
+                "author": "Sophie Dufour",
+                "role": "Designer",
+                "rating": "4.0"
+            },
+            "testimonial-five": {
+                "image": "",
+                "quote": "I am speechless, this service is a real gem! I am delighted to have discovered it!",
+                "author": "Lucie Lefevre",
+                "role": "Marketing Manager",
+                "rating": "5.0"
+            },
+            "testimonial-six": {
+                "image": "https://fastly.picsum.photos/id/399/2048/1365.jpg?hmac=Tm7jwbWj0i70u952g5yC0da-gxScdY2mQ6gjKrP8Haw",
+                "quote": "A quality service, I recommend it without hesitation!",
+                "author": "Marie Martin",
+                "role": "Project Manager",
+                "rating": "3.5"
+            }
+        },
+        "pricings": {
+            "pricing-one": {
+                "logo": "thumbs-up",
+                "title": "Free plan",
+                "description": "A free plan to discover our services and test them.",
+                "price": "0.00",
+                "features": "Feature 1, Feature 2, Feature 3",
+                "cta": "Get started",
+                "link": "/",
+                "featured": "false"
+            },
+            "pricing-two": {
+                "logo": "luggage",
+                "title": "Premium plan",
+                "description": "A premium plan to enjoy all our services without limits.",
+                "price": "99.99",
+                "features": "Feature 1, Feature 2, Feature 3, Feature 4",
+                "cta": "Get started",
+                "link": "/",
+                "featured": "true"
+            },
+            "pricing-three": {
+                "logo": "server",
+                "title": "Business plan",
+                "description": "A business plan for companies that want to go further.",
+                "price": "199.99",
+                "features": "Feature 1, Feature 2, Feature 3, Feature 4, Feature 5",
+                "cta": "Get started",
+                "link": "/",
+                "featured": "false"
+            }
+        },
+        "faq": {
+            "title": "Frequently asked questions",
+            "questions": {
+                "question-one": {
+                    "question": "What is your refund policy?",
+                    "answer": "Our refund policy is very simple. You can cancel your subscription at any time and you will not be charged for the following month."
+                },
+                "question-two": {
+                    "question": "Do you offer a free plan?",
+                    "answer": "Yes, we offer a free plan that allows you to discover our services and test them."
+                },
+                "question-three": {
+                    "question": "Can I change my plan at any time?",
+                    "answer": "Yes, you can change your plan at any time. You can upgrade or downgrade your plan according to your needs."
+                },
+                "question-four": {
+                    "question": "Do you offer a discount for annual subscriptions?",
+                    "answer": "Yes, we offer a discount for annual subscriptions. You can save up to 20% by choosing an annual subscription."
+                }
+            }
+        }
+    },
+    "Booking": {
+        "title": "Booking",
+        "description": "Book your appointment online in just a few clicks, no strings attached. It's quick, easy and convenient ! Here's how it works :",
+        "process": "Choose a time that works for you; Fill out the form with your details; Get a confirmation email with the meeting details; Done ! The appointment is booked."
+    },
+    "Forms": {
+        "contact": {
+            "title": "Contact us",
+            "description": "Do you have any questions or comments? Contact us using the form below.",
+            "fname": "First name",
+            "fname_pattern": "Your first name must contain only letters.",
+            "lname": "Last name",
+            "lname_pattern": "Your last name must contain only letters.",
+            "phone": "Phone",
+            "phone_pattern": "Your phone number is invalid, can be +41 76 123 45 67 or 076 123 45 67.",
+            "email": "Email",
+            "email_pattern": "Your email address is invalid.",
+            "message": "Message",
+            "message_pattern": "Follwing characters are not allowed: <, >, |, '{, '}, [, ]",
+            "submit": "Send message",
+            "ariaLabel": "Contact form",
+            "success": "Your message has been sent successfully.",
+            "error": "An error occurred while sending your message. Please try again later or contact the site administrator if the problem persists.",
+            "captcha": "Please check the captcha to continue.",
+            "captcha_error": "Your captcha validation token couldn't be verified by Cloudflare. Please try again later or contact the site administrator if the problem persists.",
+            "token_error": "An unknown error occurred while validating your captcha client token. Please try again later or contact the site administrator if the problem persists.",
+            "unsupported": "This feature is not supported by your browser. Please update your browser to the latest version.",
+            "submitting": "Sending...",
+            "required": "This field is required.",
+            "minLength": "This field is too short.",
+            "maxLength": "This field is too long.",
+            "pattern": "Your input is invalid."
+        }
+    }
+}

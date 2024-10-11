@@ -1,0 +1,176 @@
+{
+    "Navigation": {
+        "home": "Accueil",
+        "about": "À propos",
+        "booking": "Réservations",
+        "contact": "Contact",
+        "srMenu": "Ouvrir le menu",
+        "srLogo": "Acme Inc"
+    },
+    "Booking": {
+        "title": "Réservations",
+        "description": "Réservez votre rendez-vous en ligne en quelques clics, sans engagement. C'est rapide, facile et pratique ! Voici comment ça marche :",
+        "process": "Choisissez un horaire qui vous convient; Remplissez le formulaire avec vos coordonnées; Recevez un email de confirmation avec les détails du rendez-vous; C'est fait ! Le rendez-vous est réservé."
+    },
+    "HomePage": {
+        "title": "Bienvenue sur notre site",
+        "description": "Ceci est une description de notre site",
+        "cta": "En savoir plus",
+        "ariaLabel": "L'en-tête de la page d'accueil",
+        "features": {
+            "feature-one": {
+                "title": "Susciter la prise de conscience",
+                "description": "Je vous aide à dépasser vos blocages, identifier vos résistances et agir plus efficacement grâce à des outils émotionnels et créatifs."
+            },
+            "feature-two": {
+                "title": "Un environnement sûr",
+                "description": "Je crée un espace confidentiel, bienveillant et sans jugement, propice à la prise de conscience et à la recherche de solutions adaptées à vos besoins."
+            },
+            "feature-three": {
+                "title": "Développement artistique",
+                "description": "Je vous aide à surmonter vos blocages créatifs, à déconstruire le syndrome de l’imposteur et à affirmer votre véritable identité artistique."
+            },
+            "feature-four": {
+                "title": "Une vision holistique",
+                "description": "Mon approche, basée sur les 5 formes d'intelligence et les avancées en neurosciences, révèle vos besoins profonds et vous guide vers des solutions durables."
+            }
+        },
+        "showcase-one": {
+            "title": "Découvrez nos services",
+            "description": "Ceci est un paragraphe de présentation de nos services, la révolution est en marche ! Nos services sont à la pointe de la technologie et on le potentiel de changer votre vie !"
+        },
+        "showcase-two": {
+            "title": "Allons boire un café",
+            "description": "Venez boire un café avec nous et discuter de vos projets. On vous attend !"
+        },
+        "showcase-three": {
+            "title": "Découvrez le cerveau de l'équipe",
+            "description": "Voici le cerveau derrière notre équipe, il est aussi sympa que brillant ! On a hâte de vous rencontrer !"
+        },
+        "testimonials": {
+            "testimonial-one": {
+                "image": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU",
+                "quote": "Ce service a changé ma vie, je ne pourrais plus m'en passer !",
+                "author": "Jean Dupont",
+                "role": "Directeur",
+                "rating": "5.0"
+            },
+            "testimonial-two": {
+                "image": "https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg",
+                "quote": "Un service de qualité, je recommande vivement ! Franchement, c'est top !",
+                "author": "Marie Martin",
+                "role": "Chef de projet",
+                "rating": "5.0"
+            },
+            "testimonial-three": {
+                "image": "https://fastly.picsum.photos/id/177/2515/1830.jpg?hmac=G8-2Q3-YPB2TreOK-4ofcmS-z5F6chIA0GHYAe5yzDY",
+                "quote": "Exceptionnel, je suis bluffé par la qualité de ce service ! J'ai clairement fait le bon choix !",
+                "author": "Pierre Durand",
+                "role": "Développeur",
+                "rating": "5.0"
+            },
+            "testimonial-four": {
+                "image": "https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg",
+                "quote": "Pas mal, je dois dire que je suis agréablement surpris par ce service ! Un petit bémol cependant...",
+                "author": "Sophie Dufour",
+                "role": "Designer",
+                "rating": "4.0"
+            },
+            "testimonial-five": {
+                "image": "",
+                "quote": "Wow, je suis impressionné par la qualité des prestations ! Rien à redire, c'est parfait !",
+                "author": "Lucie Lefevre",
+                "role": "Graphiste",
+                "rating": "5.0"
+            },
+            "testimonial-six": {
+                "image": "https://fastly.picsum.photos/id/399/2048/1365.jpg?hmac=Tm7jwbWj0i70u952g5yC0da-gxScdY2mQ6gjKrP8Haw",
+                "quote": "Un service de qualité, je recommande sans hésiter !",
+                "author": "Marie Martin",
+                "role": "Chef de projet",
+                "rating": "3.5"
+            }
+        },
+        "pricings": {
+            "pricing-one": {
+                "logo": "thumbs-up",
+                "title": "Plan gratuit",
+                "description": "Un plan gratuit pour découvrir nos services et les tester.",
+                "price": "0.00",
+                "features": "Fonctionnalité 1, Fonctionnalité 2, Fonctionnalité 3",
+                "cta": "Commencer",
+                "link": "/",
+                "featured": "false"
+            },
+            "pricing-two": {
+                "logo": "luggage",
+                "title": "Plan premium",
+                "description": "Un plan premium pour les utilisateurs exigeants.",
+                "price": "9.99",
+                "features": "Fonctionnalité 1, Fonctionnalité 2, Fonctionnalité 3, Fonctionnalité 4",
+                "cta": "Commencer",
+                "link": "/",
+                "featured": "true"
+            },
+            "pricing-three": {
+                "logo": "server",
+                "title": "Plan entreprise",
+                "description": "Un plan pour les entreprises qui veulent aller plus loin.",
+                "price": "19.99",
+                "features": "Fonctionnalité 1, Fonctionnalité 2, Fonctionnalité 3, Fonctionnalité 4, Fonctionnalité 5",
+                "cta": "Commencer",
+                "link": "/",
+                "featured": "false"
+            }
+        },
+        "faq": {
+            "title": "Questions fréquentes",
+            "questions": {
+                "question-one": {
+                    "question": "Quels sont vos horaires d'ouverture ?",
+                    "answer": "Nous sommes ouverts du lundi au vendredi de 9h à 18h."
+                },
+                "question-two": {
+                    "question": "Quels sont vos tarifs ?",
+                    "answer": "Nos tarifs varient en fonction des services demandés. Contactez-nous pour un devis personnalisé."
+                },
+                "question-three": {
+                    "question": "Proposez-vous des services sur mesure ?",
+                    "answer": "Oui, nous proposons des services sur mesure pour répondre à vos besoins spécifiques."
+                },
+                "question-four": {
+                    "question": "Quels sont les délais de livraison ?",
+                    "answer": "Les délais de livraison varient en fonction des services demandés. Nous nous engageons à respecter les délais convenus."
+                }
+            }
+        }
+    },
+    "Forms": {
+        "contact": {
+            "title": "Contactez-nous",
+            "description": "Vous avez une question ? Vous souhaitez en savoir plus sur nos services ? N'hésitez pas à nous contacter en remplissant le formulaire ci-dessous.",
+            "fname": "Prénom",
+            "fname_pattern": "Le prénom ne peut contenir que des lettres et des tirets.",
+            "lname": "Nom",
+            "lname_pattern": "Le nom ne peut contenir que des lettres et des tirets.",
+            "phone": "Téléphone",
+            "phone_pattern": "Le numéro de téléphone doit être au format +41 76 123 45 67 ou 076 123 45 67.",
+            "email": "Email",
+            "email_pattern": "L'adresse email n'est pas valide.",
+            "message": "Message",
+            "message_pattern": "Les caractères suivant ne sont pas autorisés <, >, |, '{, '}, [, ]",
+            "submit": "Envoyer",
+            "ariaLabel": "Formulaire de contact",
+            "success": "Votre message a bien été envoyé ! Nous vous recontacterons dans les plus brefs délais.",
+            "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard ou contacter l'administrateur du site si le problème persiste.",
+            "captcha": "Veuillez cocher la case pour prouver que vous n'êtes pas un robot.",
+            "captcha_error": "Votre jeton de validation n'a pas pu être vérifié par le serveur de Cloudflare. Veuillez réessayer plus tard ou contacter l'administrateur du site si le problème persiste.",
+            "token_error": "Une erreur anormale est survenue lors de la validation du jeton client avec le captcha. Veuillez réessayer plus tard ou contacter l'administrateur du site si le problème persiste.",
+            "unsupported": "Votre navigateur ne supporte pas la fonctionnalité de captcha. Merci de mettre à jour votre navigateur.",
+            "submitting": "Envoi en cours...",
+            "required": "Ce champ est obligatoire.",
+            "minLength": "Ce champ est trop court.",
+            "maxLength": "Ce champ est trop long."
+        }
+    }
+}
