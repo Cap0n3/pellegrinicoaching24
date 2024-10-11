@@ -20,26 +20,32 @@ export default function Home() {
             <DefaultFeatures />
             <VisualTextSection
                 id="feature1"
-                imageLink="/images/laptop.webp"
+                imageLink="/images/showcase_one_optimized.webp"
                 title={t("showcase-one.title")}
                 paragraph={t("showcase-one.description")}
             />
             <VisualTextSection
                 id="feature2"
-                imageLink="/images/coffee.webp"
+                imageLink="/images/showcase_two_optimized.webp"
                 title={t("showcase-two.title")}
                 paragraph={t("showcase-two.description")}
                 inverted
             />
             <VisualTextSection
                 id="feature3"
-                imageLink="/images/mastermind.webp"
+                imageLink="/images/showcase_three_optimized.webp"
                 title={t("showcase-three.title")}
                 paragraph={t("showcase-three.description")}
             />
+            <VisualTextSection
+                id="feature4"
+                imageLink="/images/showcase_four_optimized.webp"
+                title={t("showcase-four.title")}
+                paragraph={t("showcase-four.description")}
+                inverted
+            />
             <Testimonials contrast />
-            <Parallax />
-            <Pricings contrast />
+            <Parallax title="Prenez rendez-vous dès maintenant" cta="YES" />
             <CTA />
             <FAQSection
                 id="faq"

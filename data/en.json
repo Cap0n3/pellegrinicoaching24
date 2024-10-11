@@ -8,11 +8,12 @@
         "srLogo": "Acme Inc"
     },
     "HomePage": {
-        "title": "Welcome to our site",
-        "description": "This is a description of our site",
+        "title": "Move from inspiration to action",
+        "description": "Michael Pellegrini, certified life coach, helps you unleash your creative potential and transform your life by tapping into your inspiration.",
         "cta": "Learn more",
         "ariaLabel": "Hero header of the home page",
         "features": {
+            "cta": "Learn more",
             "feature-one": {
                 "title": "Stimulating awareness",
                 "description": "I help you to overcome your blockages, identify your resistance and act more effectively using emotional and creative tools."
@@ -31,16 +32,20 @@
             }
         },
         "showcase-one": {
-            "title": "Discover our services",
-            "description": "This is a presentation paragraph of our services, the revolution is underway! Our services are at the cutting edge of technology and have the potential to change your life!"
+            "title": "Stimulate awareness",
+            "description": "Awareness is essential to understanding and accepting your own mechanisms. Using tools that engage the emotions and creativity, I help you to go beyond the limits imposed by the mind. This enables you to identify your resistances and saboteurs, which are holding you back. Once these obstacles have been recognised, you can then take more effective action."
         },
         "showcase-two": {
-            "title": "Let's have a coffee",
-            "description": "Come have a coffee with us and discuss your projects. We are waiting for you!"
+            "title": "A safe place",
+            "description": "I create a safe and caring environment, where strict confidentiality and the absence of judgement or diagnosis free up the floor to speak. This space of trust fosters a deep awareness of your personal and professional challenges, enabling you to find solutions tailored to your needs."
         },
         "showcase-three": {
-            "title": "Meet the mastermind of the team",
-            "description": "Here is the mastermind behind our team, he is as nice as he is brilliant! We can't wait to meet you!"
+            "title": "Artistic development",
+            "description": "I'll help you overcome your creative blocks and become a full player in your own artistic development. Together, we will deconstruct the imposter syndrome to reveal and affirm your true creative identity."
+        },
+        "showcase-four": {
+            "title": "A holistic vision",
+            "description": "Based on the 5 forms of intelligence (cognitive, emotional, somatic, intuitive and collective), my approach also incorporates a global vision, the use of body language and the latest advances in neuroscience. These techniques enable me to reveal your deepest needs and guide you towards lasting solutions."
         },
         "testimonials": {
             "testimonial-one": {

@@ -18,6 +18,7 @@
         "cta": "En savoir plus",
         "ariaLabel": "L'en-tête de la page d'accueil",
         "features": {
+            "cta": "En savoir plus",
             "feature-one": {
                 "title": "Susciter la prise de conscience",
                 "description": "Je vous aide à dépasser vos blocages, identifier vos résistances et agir plus efficacement grâce à des outils émotionnels et créatifs."
@@ -36,16 +37,20 @@
             }
         },
         "showcase-one": {
-            "title": "Découvrez nos services",
-            "description": "Ceci est un paragraphe de présentation de nos services, la révolution est en marche ! Nos services sont à la pointe de la technologie et on le potentiel de changer votre vie !"
+            "title": "Susciter la prise de conscience",
+            "description": "La prise de conscience est essentielle pour comprendre et accepter vos propres mécanismes. En utilisant des outils qui sollicitent les émotions et la créativité, je vous aide à dépasser les limites imposées par le mental. Cela permet d’identifier vos résistances et vos saboteurs, qui freinent votre progression. Une fois ces obstacles reconnus, vous pouvez alors passer à l’action de manière plus efficace."
         },
         "showcase-two": {
-            "title": "Allons boire un café",
-            "description": "Venez boire un café avec nous et discuter de vos projets. On vous attend !"
+            "title": "Un environnement sûr",
+            "description": "Je crée un environnement sûr et bienveillant, où la stricte confidentialité et l’absence de jugement ou de diagnostic libèrent la parole. Cet espace de confiance favorise une prise de conscience profonde de vos défis personnels et professionnels, vous permettant de trouver des solutions adaptées à vos besoins."
         },
         "showcase-three": {
-            "title": "Découvrez le cerveau de l'équipe",
-            "description": "Voici le cerveau derrière notre équipe, il est aussi sympa que brillant ! On a hâte de vous rencontrer !"
+            "title": "Développement artistique",
+            "description": "Je vous accompagne pour surmonter vos blocages créatifs et devenir pleinement acteur ou actrice de votre propre évolution artistique. Ensemble, nous déconstruisons le syndrome de l’imposteur afin de révéler et affirmer votre véritable identité créative."
+        },
+        "showcase-four": {
+            "title": "Une vision holistique",
+            "description": "Fondée sur les 5 formes d’intelligence (cognitive, émotionnelle, somatique, intuitive et collective), mon approche intègre également une vision globale, l’utilisation du langage du corps et les dernières avancées en neurosciences. Ces techniques me permettent de révéler vos besoins profonds et de vous guider vers des solutions durables."
         },
         "testimonials": {
             "testimonial-one": {

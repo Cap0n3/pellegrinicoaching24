@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 type ParallaxProps = {
-    title: string;
+    title?: string;
+    cta?: string;
 };
 
 /**
@@ -10,16 +11,17 @@ type ParallaxProps = {
  */
 export default function Parallax({
     title = "Some random text",
+    cta = "Call to action",
 }: ParallaxProps) {
     return (
         <div
             className="flex h-96 w-full flex-col items-center justify-center bg-parallax bg-cover bg-fixed"
             tabIndex={0}
         >
-            <h2 className="text-3xl uppercase text-white">{title}</h2>
+            {/* <h2 className="text-3xl uppercase text-white">{title}</h2>
             <Button aria-label="CTA" className="mt-6">
-                Call to action
-            </Button>
+                {cta}
+            </Button> */}
         </div>
     );
 }

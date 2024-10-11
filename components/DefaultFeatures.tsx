@@ -9,6 +9,7 @@ type FeatLayoutProps = {
 	logo: React.ReactNode;
 	title: string,
 	description: string,
+	cta: string,
 	link: string,
 	fx_delay?: number
 }
@@ -17,6 +18,7 @@ function FeatLayout({
 	logo,
 	title,
 	description,
+	cta,
 	link,
 	fx_delay = 0 
 }: FeatLayoutProps) {
@@ -30,7 +32,7 @@ function FeatLayout({
 					</div>
 					<p className="text-gray-500 dark:text-gray-400 mb-4">{description}</p>
 				</div>
-				<Link href={link} scroll={true} className="w-full lg:w-fit">En savoir plus</Link>
+				<Link href={link} scroll={true} className="w-full lg:w-fit">{cta}</Link>
 			</div>
 		</Slide>
 	)
@@ -49,12 +51,14 @@ export default function DefaultFeatures({ }: DefaultFeaturesProps) {
 					logo={<Eye size={30} />}
 					title={t("features.feature-one.title")}
 					description={t("features.feature-one.description")}
+					cta={t("features.cta")}
 					link="#feature1"
 				/>
 				<FeatLayout 
 					logo={<Umbrella size={30} />}
 					title={t("features.feature-two.title")}
 					description={t("features.feature-two.description")}
+					cta={t("features.cta")}
 					link="#feature2"
 					fx_delay={300} 
 				/>
@@ -62,6 +66,7 @@ export default function DefaultFeatures({ }: DefaultFeaturesProps) {
 					logo={<Brush size={30} />}
 					title={t("features.feature-three.title")}
 					description={t("features.feature-three.description")}
+					cta={t("features.cta")}
 					link="#feature3"
 					fx_delay={600} 
 				/>
@@ -69,6 +74,7 @@ export default function DefaultFeatures({ }: DefaultFeaturesProps) {
 					logo={<Earth size={30} />}
 					title={t("features.feature-four.title")}
 					description={t("features.feature-four.description")}
+					cta={t("features.cta")}
 					link="#feature4"
 					fx_delay={900} 
 				/>
