@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Slide from "./Slide";
+import Headings from "@/components/common/Headings";
 
 interface SectionProps {
     id: string;
@@ -42,7 +43,7 @@ export default function VisualTextSection({
         >
             <Slide>
                 <div tabIndex={0}>
-                    <h2 className="mb-4 text-2xl font-bold">{title}</h2>
+                    <Headings title={title} type="h3" className="mb-6 text-start" />
                     <p className="text-md">{paragraph}</p>
                 </div>
             </Slide>

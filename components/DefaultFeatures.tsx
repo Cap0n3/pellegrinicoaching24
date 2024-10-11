@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Slide from "@/components/common/Slide";
 import { BadgePlus, Eye, Umbrella, Brush, Earth } from "lucide-react";
 import Link from "next/link";
+import Headings from "@/components/common/Headings";
 
 
 type FeatLayoutProps = {
@@ -28,9 +29,9 @@ function FeatLayout({
 				<div>
 					<div className="flex flex-row justify-start items-center gap-4 mb-4">
 						{logo}
-						<h3 className="text-xl font-bold dark:text-white">{title}</h3>
+						<Headings title={title} type="h5" className="text-start mb-0 font-bold" />
 					</div>
-					<p className="text-gray-500 dark:text-gray-400 mb-4">{description}</p>
+					<p className="text-gray-500 dark:text-gray-400 mb-4 font-light">{description}</p>
 				</div>
 				<Link href={link} scroll={true} className="w-full lg:w-fit">{cta}</Link>
 			</div>

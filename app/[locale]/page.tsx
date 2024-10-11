@@ -3,12 +3,14 @@ import Features from "@/components/Features";
 import DefaultFeatures from "@/components/DefaultFeatures";
 import Hero from "@/components/Hero";
 import ScrollResetter from "@/components/common/ScrollResetter";
-import CTA from "@/components/CTA";
+import CTA from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import Parallax from "@/components/Parallax";
 import Pricings from "@/components/Pricings";
 import FAQSection from "@/components/FAQ";
 import { useTranslations } from "next-intl";
+import About from "./about/page";
+import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
     const t = useTranslations("HomePage");
@@ -46,7 +48,7 @@ export default function Home() {
             />
             <Testimonials contrast />
             <Parallax title="Prenez rendez-vous dès maintenant" cta="YES" />
-            <CTA />
+            <AboutSection />
             <FAQSection
                 id="faq"
                 title={"FAQ"}

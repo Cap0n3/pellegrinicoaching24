@@ -96,6 +96,11 @@
                 "rating": "3.5"
             }
         },
+        "about-section": {
+            "title": "Michael Pellegrini",
+            "description-p1": "Musicien passionné, compositeur et multi-instrumentiste, Michael a consacré sa vie à l'exploration de l'expression musicale sous toutes ses formes. Son amour pour le partage et l'enseignement l'a naturellement conduit à accompagner ses élèves dans la découverte de leur propre identité artistique. Confronté aux blocages et aux défis que rencontrent de nombreux créatifs, il a choisi de se former au coaching pour offrir des outils efficaces permettant de les surmonter. Certifié Coach Professionnel par l'approche Coaching RelationCare® de l'école WAKAN, fondée par David Denis Hertz, MCC, Michael allie expertise et bienveillance pour vous aider à libérer votre potentiel. Cette formation, accréditée au niveau international par l'ICF (ACTP) et reconnue nationalement par EDUQUA, garantit un accompagnement de qualité.",
+            "description-p2": "Michael est convaincu que la prise de conscience est la clé pour comprendre et transformer vos mécanismes internes. En intégrant des outils qui sollicitent les émotions et la créativité, il vous guide pour dépasser les limites imposées par le mental. Dans un environnement sûr et confidentiel, exempt de tout jugement, vous pourrez identifier vos résistances et vos saboteurs, ouvrant ainsi la voie à une action plus efficace. Son approche holistique s'appuie sur les cinq formes d'intelligence : cognitive, émotionnelle, somatique, intuitive et collective. En s'inspirant des dernières avancées en neurosciences et en accordant une attention particulière au langage du corps, Michael vous aide à révéler vos besoins profonds et à trouver des solutions durables."
+        },
         "pricings": {
             "pricing-one": {
                 "logo": "thumbs-up",
@@ -132,20 +137,20 @@
             "title": "Questions fréquentes",
             "questions": {
                 "question-one": {
-                    "question": "Quels sont vos horaires d'ouverture ?",
-                    "answer": "Nous sommes ouverts du lundi au vendredi de 9h à 18h."
+                    "question": "En quoi un coach de vie peut-il m'aider ?",
+                    "answer": "Un coach de vie peut vous accompagner efficacement dans votre parcours vers l'action. En utilisant des outils pour contourner les obstacles mentaux et en explorant vos émotions, vous découvrirez des réponses durables à vos questions."
                 },
                 "question-two": {
-                    "question": "Quels sont vos tarifs ?",
-                    "answer": "Nos tarifs varient en fonction des services demandés. Contactez-nous pour un devis personnalisé."
+                    "question": "Comment se déroulent les séances de coaching ?",
+                    "answer": "Les séances commencent par l'identification de vos besoins du moment et l'établissement d'objectifs spécifiques pour la séance en cours. À travers des questionnements et des exercices engageant l'imagination, le corps et les émotions, nous progressons ensemble vers des actions concrètes pour atteindre vos objectifs."
                 },
                 "question-three": {
-                    "question": "Proposez-vous des services sur mesure ?",
-                    "answer": "Oui, nous proposons des services sur mesure pour répondre à vos besoins spécifiques."
+                    "question": "Quels types de problèmes ou défis peuvent être abordés en coaching de vie ?",
+                    "answer": "En coaching de vie, tous les problèmes, défis, désirs et rêves liés au présent ou à l'avenir sont abordables."
                 },
                 "question-four": {
-                    "question": "Quels sont les délais de livraison ?",
-                    "answer": "Les délais de livraison varient en fonction des services demandés. Nous nous engageons à respecter les délais convenus."
+                    "question": "Est-ce que le coaching de vie est confidentiel ?",
+                    "answer": "La confidentialité est primordiale pour assurer le succès et les bienfaits d'une séance de coaching. Toutes les informations échangées sont traitées de manière confidentielle."
                 }
             }
         }
