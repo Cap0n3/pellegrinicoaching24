@@ -9,6 +9,7 @@ type FeatLayoutProps = {
 	logo: React.ReactNode;
 	title: string,
 	description: string,
+	link: string,
 	fx_delay?: number
 }
 
@@ -16,6 +17,7 @@ function FeatLayout({
 	logo,
 	title,
 	description,
+	link,
 	fx_delay = 0 
 }: FeatLayoutProps) {
 	return (
@@ -28,7 +30,7 @@ function FeatLayout({
 					</div>
 					<p className="text-gray-500 dark:text-gray-400 mb-4">{description}</p>
 				</div>
-				<Link href="#feature1" scroll={true} className="w-full lg:w-fit">En savoir plus</Link>
+				<Link href={link} scroll={true} className="w-full lg:w-fit">En savoir plus</Link>
 			</div>
 		</Slide>
 	)
@@ -47,23 +49,27 @@ export default function DefaultFeatures({ }: DefaultFeaturesProps) {
 					logo={<Eye size={30} />}
 					title={t("features.feature-one.title")}
 					description={t("features.feature-one.description")}
+					link="#feature1"
 				/>
 				<FeatLayout 
 					logo={<Umbrella size={30} />}
 					title={t("features.feature-two.title")}
 					description={t("features.feature-two.description")}
+					link="#feature2"
 					fx_delay={300} 
 				/>
 				<FeatLayout 
 					logo={<Brush size={30} />}
 					title={t("features.feature-three.title")}
 					description={t("features.feature-three.description")}
+					link="#feature3"
 					fx_delay={600} 
 				/>
 				<FeatLayout 
 					logo={<Earth size={30} />}
 					title={t("features.feature-four.title")}
 					description={t("features.feature-four.description")}
+					link="#feature4"
 					fx_delay={900} 
 				/>
 			</div>
