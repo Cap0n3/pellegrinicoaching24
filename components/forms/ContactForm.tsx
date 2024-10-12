@@ -17,6 +17,7 @@ import Turnstile, { useTurnstile } from "react-turnstile";
 import { verifyToken } from "@/utils/turnstileVerification";
 import { useTheme } from "next-themes";
 
+
 const EMAIL_API_ENDPOINT = "/api/email";
 
 interface IFormInput {
@@ -57,7 +58,7 @@ export default function ContactForm(): JSX.Element {
         null
     );
     const [isUnsupported, setIsUnsupported] = useState(false);
-
+    
     /**
      * Fully reset the form state
      */
@@ -153,34 +154,34 @@ export default function ContactForm(): JSX.Element {
             >
                 <SelectField
                     id="contact_subject"
-                    label="Subject"
+                    label={t("subject")}
                     options={[
-                        { value: "General", label: "General" },
-                        { value: "Support", label: "Support" },
-                        { value: "Feedback", label: "Feedback" },
-                        { value: "Other", label: "Other" },
+                        { value: "Question", label: "Question" },
+                        { value: "Rendez-vous", label: "Rendez-vous" },
+                        { value: "Autre", label: "Autre" },
                     ]}
                     {...register("subject")}
                 />
                 <fieldset className="mb-5 flex flex-row items-center justify-start gap-3">
                     <legend className="mb-3 block text-sm font-medium text-primary">
-                        Please select your preferred contact method:
+                        {t("modality")}
                     </legend>
                     <RadioButton
                         id="contact_option1"
-                        label="Option 1"
-                        value="option1"
+                        label={t("option1")}
+                        value="aucune"
+                        checked
                         {...register("option")}
                     />
                     <RadioButton
                         id="contact_option2"
-                        label="Option 2"
+                        label={t("option2")}
                         value="option2"
                         {...register("option")}
                     />
                     <RadioButton
                         id="contact_option3"
-                        label="Option 3"
+                        label={t("option3")}
                         value="option3"
                         {...register("option")}
                     />
