@@ -97,7 +97,7 @@ export default function Testimonials({
                                             }
                                         />
                                         <CardDescription className="max-h-24 overflow-auto">
-                                            "{t(`${key}.quote`)}"
+                                            &quot;{t(`${key}.quote`)}&quot;
                                         </CardDescription>
                                     </CardContent>
                                 </Card>

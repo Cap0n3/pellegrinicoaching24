@@ -43,4 +43,6 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     )
 );
 
+Select.displayName = "SelectInput";
+
 export default Select;

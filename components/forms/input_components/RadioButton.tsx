@@ -1,6 +1,7 @@
 import React from "react";
 import { UseFormRegisterReturn } from "react-hook-form";
 import { cn } from "@/lib/utils";
+import { Radio } from "lucide-react";
 
 type RadioButtonProps = {
     value: string;
@@ -31,5 +32,7 @@ const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
         </div>
     )
 );
+
+RadioButton.displayName = "RadioButton";
 
 export default RadioButton;

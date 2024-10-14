@@ -1,6 +1,7 @@
 import React from "react";
 import { UseFormRegister } from "react-hook-form";
 import { cn } from "@/lib/utils";
+import { Input } from "postcss";
 
 type IFormValues = {
     [key: string]: any;
@@ -66,5 +67,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
         );
     }
 );
+
+InputField.displayName = "InputField";
 
 export default InputField;
