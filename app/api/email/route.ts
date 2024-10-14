@@ -29,6 +29,7 @@ export async function POST(request: Request) {
                     email,
                     message,
                 },
+                accessToken: process.env.ACCESS_TOKEN!,
             }),
             headers: {
                 "Content-Type": "application/json",

@@ -170,7 +170,6 @@ export default function ContactForm(): JSX.Element {
                         id="contact_option1"
                         label={t("option1")}
                         value="aucune"
-                        checked
                         {...register("option")}
                     />
                     <RadioButton
