@@ -38,7 +38,7 @@ export default function Footer() {
                             {t("about")}
                         </Link>
                     </li> */}
-                    <li>
+                    {/* <li>
                         <Link
                             href="/booking"
                             className="text-md hover:text-gray-300"
@@ -46,7 +46,7 @@ export default function Footer() {
                         >
                             {t("booking")}
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link
                             href="/contact"

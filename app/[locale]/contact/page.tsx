@@ -17,7 +17,7 @@ export default function Contact() {
 
     return (
         <main className="w-full">
-            <PageHeader title="Contact Us" />
+            <PageHeader title="" imageUrl="/images/contact_header.webp" />
             <section className="m-10 flex max-w-[2000px] flex-col justify-center gap-8 overflow-hidden rounded-lg bg-zinc-100 dark:bg-gray-900 md:m-20 lg:flex-row lg:gap-0">
                 <div className="order-first w-full p-10 lg:order-none lg:w-1/2">
                     <h2 className="mb-10 text-center text-xl font-medium leading-6 text-gray-900">
@@ -25,7 +25,7 @@ export default function Contact() {
                     </h2>
                     <ContactForm />
                 </div>
-                <div className="flex min-h-96 w-full flex-col items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-10 lg:w-1/2">
+                <div className="flex min-h-96 w-full flex-col items-center bg-gradient-to-r from-[#FFF9EB] to-[#69777A] p-10 lg:w-1/2">
                     <h2 className="mb-10 text-center text-xl font-medium leading-6 text-gray-900">
                         {t("contact_infos")}
                     </h2>
@@ -40,7 +40,7 @@ export default function Contact() {
                         <TabsContent value="address">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle className="flex flex-row gap-2">
+                                    <CardTitle className="flex flex-row gap-2 mb-4">
                                         <House /> {t("address_title")}
                                     </CardTitle>
                                     <CardDescription>
@@ -57,7 +57,7 @@ export default function Contact() {
                         <TabsContent value="phone">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle className="flex flex-row gap-2">
+                                    <CardTitle className="flex flex-row gap-2 mb-4">
                                         <Phone /> {t("business_phone_title")}
                                     </CardTitle>
                                     <CardDescription>
