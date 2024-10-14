@@ -143,7 +143,7 @@ export default function ContactForm(): JSX.Element {
 
             return () => clearTimeout(timer);
         }
-    }, [submitStatus]);
+    }, [submitStatus, handleReset]);
 
     return (
         <div className="flex w-full flex-col items-center justify-center bg-transparent">

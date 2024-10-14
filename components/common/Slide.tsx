@@ -59,7 +59,7 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, classProps }) => {
     // Update position on mount and whenever window size or scroll position changes
     useEffect(() => {
         debounceUpdatePosition();
-    }, [scrollPosition, windowSize]);
+    }, [scrollPosition, windowSize, debounceUpdatePosition]);
 
     // Add delay to the animation (it's a hacky way to add delay it for now)
     useEffect(() => {
@@ -69,7 +69,7 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, classProps }) => {
                 setShow(true);
             }, delay);
         }
-    }, [isInView]);
+    }, [isInView, delay]);
 
     // DELAY VARIABLE NOT WORKING PROPERLY ... FIX IT
 
