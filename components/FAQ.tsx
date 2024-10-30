@@ -87,7 +87,7 @@ export default function FAQSection({
     return (
         <section
             id={id}
-            className={`flex w-full items-center justify-center px-10 py-10 md:px-20 ${contrast ? "via-grey-50 bg-gradient-to-r from-white via-[#fcfcfc] to-[#fbfbfb] dark:bg-gradient-to-r dark:from-gray-800 dark:via-slate-700 dark:to-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`flex w-full items-center justify-center px-10 py-10 md:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
             <div
                 className={`flex w-full max-w-[2000px] flex-col items-center justify-center lg:flex-row ${inverted ? "lg:flex-row-reverse" : ""}`}
