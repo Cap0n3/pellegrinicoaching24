@@ -15,7 +15,7 @@ export default function Parallax({
 }: ParallaxProps) {
     return (
         <div
-            className="flex h-96 w-full flex-col items-center justify-center bg-parallax bg-cover bg-fixed"
+            className="flex h-96 w-full flex-col items-center justify-center bg-parallax bg-cover bg-no-repeat bg-fixed bg-[50%_0%]"
             tabIndex={0}
         >
             {/* <h2 className="text-3xl uppercase text-white">{title}</h2>

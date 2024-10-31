@@ -24,7 +24,7 @@ export default function WaveDivider({
 	)
 
 	return (
-		<div className={`w-full absolute left-0 ${position === 'bottom' ? 'bottom-0' : 'top-0'}`}>
+		<div className={`w-full overflow-hidden absolute left-0 ${position === 'bottom' ? 'bottom-0' : 'top-0'}`}>
 			{position === 'bottom' ? bottomWave : topWave}
 		</div>
 	)
