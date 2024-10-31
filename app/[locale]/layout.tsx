@@ -46,7 +46,7 @@ export default async function LocaleLayout({
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="system"
-                        enableSystem
+                        enableSystem={false}
                         disableTransitionOnChange
                     >
                         <Navbar />

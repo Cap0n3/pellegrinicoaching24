@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Slide from "./Slide";
 import Headings from "@/components/common/Headings";
+import WaveDivider from "./WaveDivider";
 
 interface SectionProps {
     id: string;
@@ -10,6 +11,7 @@ interface SectionProps {
     paragraph: string;
     contrast?: boolean;
     inverted?: boolean;
+    wave?: boolean;
 }
 
 export default function VisualTextSection({
@@ -19,6 +21,7 @@ export default function VisualTextSection({
     paragraph,
     contrast = false,
     inverted = false,
+    wave = false,
 }: SectionProps) {
     const imageBlock = (
         <div className="order-first w-full :order-none lg:w-1/2">
@@ -53,14 +56,16 @@ export default function VisualTextSection({
     return (
         <section
             id={id}
-            className={`flex w-full items-center justify-center px-10 py-10 lg:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative flex w-full items-center justify-center px-10 ${wave ? "py-28 lg:py-40" : "py-10"} lg:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
+            {wave && <WaveDivider position="top" />}
             <div
                 className={`flex w-full max-w-[2000px] flex-col items-center justify-center lg:flex-row ${inverted ? "lg:flex-row-reverse" : ""}`}
             >
                 {imageBlock}
                 {textBlock}
             </div>
+            {wave && <WaveDivider position="bottom" />}
         </section>
     );
 }

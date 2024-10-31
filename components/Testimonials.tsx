@@ -20,6 +20,8 @@ import Autoplay from "embla-carousel-autoplay";
 import { useTranslations } from "next-intl";
 import RatingStars from "./RatingStars";
 import { RangedNumber } from "@/components/RatingStars";
+import WaveDivider from "./common/WaveDivider";
+
 
 export default function Testimonials({
     contrast = false,
@@ -46,8 +48,9 @@ export default function Testimonials({
 
     return (
         <section
-            className={`flex w-full justify-center px-16 py-10 md:px-20 ${contrast ? "via-grey-50 bg-gradient-to-r from-white via-[#fcfcfc] to-[#fbfbfb] dark:bg-gradient-to-r dark:from-gray-800 dark:via-slate-700 dark:to-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative flex w-full justify-center px-16 py-40 md:px-20 ${contrast ? "via-grey-50 bg-gradient-to-r from-white via-[#fcfcfc] to-[#fbfbfb] dark:bg-gradient-to-r dark:from-gray-800 dark:via-slate-700 dark:to-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
+            <WaveDivider position="top" />
             <Carousel
                 opts={{
                     align: "start",
@@ -108,6 +111,7 @@ export default function Testimonials({
                 <CarouselPrevious />
                 <CarouselNext />
             </Carousel>
+            <WaveDivider position="bottom" />
         </section>
     );
 }

@@ -26,6 +26,7 @@ export default function Home() {
                 imageLink="/images/showcase_one_optimized.webp"
                 title={t("showcase-one.title")}
                 paragraph={t("showcase-one.description")}
+                wave
             />
             <VisualTextSection
                 id="feature2"
@@ -40,6 +41,7 @@ export default function Home() {
                 imageLink="/images/showcase_three_optimized.webp"
                 title={t("showcase-three.title")}
                 paragraph={t("showcase-three.description")}
+                wave
             />
             <VisualTextSection
                 id="feature4"

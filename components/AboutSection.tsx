@@ -4,7 +4,7 @@ import Slide from "./common/Slide";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Headings from "@/components/common/Headings";
-
+import WaveDivider from "./common/WaveDivider";
 
 type Props = {
     contrast?: boolean;
@@ -15,7 +15,7 @@ export default function AboutSection({ contrast = false }: Props) {
 
     return (
         <section
-            className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-[#fcfcfc] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative w-full px-10 pt-10 pb-40 lg:px-20 ${contrast ? "bg-[#fcfcfc] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
             <div className="mx-auto max-w-screen-xl items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <Slide>
@@ -42,6 +42,7 @@ export default function AboutSection({ contrast = false }: Props) {
                     </div>
                 </Slide>
             </div>
+            <WaveDivider position="bottom" />
         </section>
     );
 }

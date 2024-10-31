@@ -8,12 +8,14 @@ import {
     FaYoutube,
 } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import WaveDivider from "./WaveDivider";
 
 export default function Footer() {
     const t = useTranslations("Navigation");
 
     return (
-        <footer className="w-full py-10 dark:bg-slate-700 sm:px-6 lg:px-8">
+        <footer className="relative w-full pt-28 lg:pt-40 pb-10 dark:bg-slate-700 sm:px-6 lg:px-8">
+            <WaveDivider position="top" />
             <div className="flex flex-col items-center justify-center">
                 <Link href="/">
                     <Target className="h-6 w-6" />
