@@ -15,7 +15,7 @@ export default function AboutSection({ contrast = false }: Props) {
 
     return (
         <section
-            className={`relative w-full px-10 pt-10 pb-40 lg:px-20 ${contrast ? "bg-[#fcfcfc] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative w-full px-10 pt-10 pb-40 lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
             <div className="mx-auto max-w-screen-xl items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <Slide>

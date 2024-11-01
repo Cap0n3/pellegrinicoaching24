@@ -126,7 +126,7 @@ export default function Pricings({ contrast = false }: { contrast?: boolean }) {
 
     return (
         <section
-            className={`flex w-full flex-col items-center justify-center gap-10 px-10 py-10 lg:flex-row ${contrast ? "bg-[#fcfcfc] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`flex w-full flex-col items-center justify-center gap-10 px-10 py-10 lg:flex-row ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
             {keys.map((key, index) => (
                 <Slide

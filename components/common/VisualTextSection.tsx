@@ -56,7 +56,7 @@ export default function VisualTextSection({
     return (
         <section
             id={id}
-            className={`relative flex w-full items-center justify-center px-10 ${wave ? "py-28 lg:py-40" : "py-10"} lg:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative flex w-full items-center justify-center px-10 ${wave ? "py-28 lg:py-40" : "py-10"} lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
             {wave && <WaveDivider position="top" />}
             <div

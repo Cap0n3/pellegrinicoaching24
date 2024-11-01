@@ -33,7 +33,7 @@ function FeatLayout({
 					</div>
 					<p className="text-gray-500 dark:text-gray-400 mb-4 font-light">{description}</p>
 				</div>
-				<Link href={link} scroll={true} className="w-full lg:w-fit">{cta}</Link>
+				<Link href={link} scroll={true} className="w-full lg:w-fit text-sky-700 font-semibold">{cta}</Link>
 			</div>
 		</Slide>
 	)
@@ -50,7 +50,7 @@ export default function DefaultFeatures({
 	const t = useTranslations("HomePage");
 
 	return (
-		<section className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}>
+		<section className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}>
 			<div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
 				<FeatLayout 
 					logo={<Eye size={30} />}

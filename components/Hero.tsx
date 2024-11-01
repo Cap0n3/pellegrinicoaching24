@@ -28,7 +28,7 @@ export default function Hero() {
                     slide
                 />
                 <Slide delay={300}>
-                    <Button aria-label={t("cta")} className="mt-6">
+                    <Button aria-label={t("cta")} className="mt-6 bg-mp-dark-blue">
                         {t("cta")}
                     </Button>
                 </Slide>

@@ -16,7 +16,7 @@ export default function SocialProof({
     const t = useTranslations("HomePage");
     
     return (
-        <section className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-[#FFF9EB] dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}>
+        <section className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}>
             <Headings title={t("social-proof.title")} type="h2" slide />
             <Headings
                 title={t("social-proof.description")}
