@@ -1,27 +1,29 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+"use client";
 
-type ParallaxProps = {
-    title?: string;
-    cta?: string;
+import React from "react";
+import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
+
+type ParallaxSectionProps = {
+    img: string;
 };
 
 /**
- * Parallax CTA component for the homepage.
+ * Parallax banner component.
  */
-export default function Parallax({
-    title = "Some random text",
-    cta = "Call to action",
-}: ParallaxProps) {
+export default function ParallaxSection({
+    img,
+}: ParallaxSectionProps) {
     return (
-        <div
-            className="flex h-96 w-full flex-col items-center justify-center bg-parallax bg-cover bg-no-repeat bg-fixed bg-[50%_0%]"
-            tabIndex={0}
-        >
-            {/* <h2 className="text-3xl uppercase text-white">{title}</h2>
-            <Button aria-label="CTA" className="mt-6">
-                {cta}
-            </Button> */}
-        </div>
+        <ParallaxProvider>
+                <ParallaxBanner
+                    layers={[
+                        {
+                            image: img,
+                            speed: -15,
+                        },
+                    ]}
+                    className="aspect-[2/1] h-[500px]"
+                />
+        </ParallaxProvider>
     );
 }

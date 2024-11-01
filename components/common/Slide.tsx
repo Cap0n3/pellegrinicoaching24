@@ -40,12 +40,30 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, classProps }) => {
     const windowSize = useWindowSize();
     const scrollPosition = useScroll();
 
+    /**
+     * Function to get the offset top of a relative positionned element.
+     * Note: Not possible to use `element.offsetTop` because it returns the offset top relative to the offsetParent.
+     * 
+     * @param element - The element to get the offset top.
+     * @returns The offset top of the element.
+     */
+    const getOffsetTop = (element: HTMLElement | null): number => {
+        let offsetTop = 0;
+        while (element) {
+            offsetTop += element.offsetTop;
+            element = element.offsetParent as HTMLElement | null;
+        }
+        return offsetTop;
+    };
+    
+
     // Function to update the container position and view status
     const updatePosition = () => {
         if (containerRef.current) {
-            const containerPosition = containerRef.current.offsetTop;
-            setContainerPosition(containerPosition);
-
+            // const containerPosition = containerRef.current.offsetTop;
+            // setContainerPosition(containerPosition);
+            const containerPosition = getOffsetTop(containerRef.current);
+            
             const bottomScroll = scrollPosition + windowSize.innerHeight;
             if (containerPosition <= bottomScroll) {
                 setIsInView(true);

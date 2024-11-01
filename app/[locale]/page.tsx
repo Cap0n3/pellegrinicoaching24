@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import ScrollResetter from "@/components/common/ScrollResetter";
 import CTA from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
-import Parallax from "@/components/Parallax";
+import ParallaxSection from "@/components/Parallax";
 import Pricings from "@/components/Pricings";
 import FAQSection from "@/components/FAQ";
 import { useTranslations } from "next-intl";
@@ -51,7 +51,7 @@ export default function Home() {
                 inverted
                 contrast
             />
-            <Parallax title="Prenez rendez-vous dès maintenant" cta="YES" />
+            <ParallaxSection img="/images/parallax.webp" />
             <AboutSection />
             <SocialProof contrast />
             <Testimonials />
