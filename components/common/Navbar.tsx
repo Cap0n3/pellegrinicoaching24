@@ -12,12 +12,15 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, Target } from "lucide-react";
+import SiteLogo from "./SiteLogo";
 import { ModeToggle } from "../ModeToggle";
 import { LocaleSwitcher } from "../LocaleSwitcher";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import React from "react";
 import { useLocale } from "next-intl";
+import { useTheme } from "next-themes";
+
 
 export default function Navbar() {
     // Get the scroll position of the page
@@ -25,6 +28,7 @@ export default function Navbar() {
     const [isScrolling, setIsScrolling] = React.useState(false);
     const t = useTranslations("Navigation");
     const locale = useLocale();
+    const { theme } = useTheme();
 
     // Handle the scroll event
     const handleScroll = () => {
@@ -59,7 +63,7 @@ export default function Navbar() {
                 <SheetContent side="left">
                     <SheetHeader>
                         <SheetTitle>
-                            <Target className="mt-10 h-6 w-6" />
+                            <SiteLogo size={50} logoTheme={theme === "dark" ? "dark" : "light"} />
                             <span className="sr-only">{t("srLogo")}</span>
                         </SheetTitle>
                         <SheetDescription />{" "}
@@ -117,7 +121,7 @@ export default function Navbar() {
                 role="logo"
             >
                 {/* SITE LOGO */}
-                <Target className="h-6 w-6" />
+                <SiteLogo size={50} logoTheme={theme === "dark" ? "dark" : "light"} />
                 <span className="sr-only">{t("srLogo")}</span>
             </Link>
             <nav className="ml-auto hidden gap-6 lg:flex">

@@ -36,8 +36,8 @@ export default function AboutSection({ contrast = false }: Props) {
                             src="/images/michael-pellegrini.webp"
                             alt="Michael Pellegrini"
                             width={1200}
-                            height={800}
-                            className="h-auto w-full object-cover"
+                            height={1799}
+                            className="h-auto w-full object-cover rounded-lg"
                         />
                     </div>
                 </Slide>
