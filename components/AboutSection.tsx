@@ -15,32 +15,36 @@ export default function AboutSection({ contrast = false }: Props) {
 
     return (
         <section
-            className={`relative w-full pb-32 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative w-full pb-24 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
-            <div className="w-full flex flex-col lg:flex-row items-start">
-                <Slide classProps="w-full lg:w-1/2">
-                    <div className="px-10 pt-10 w-full border-2" tabIndex={0}>
-                        <Headings title={t("about-section.title")} type="h2" className="text-start mb-12" slide />
-                        <p className="text-md mb-6">
-                            {t("about-section.description-p1")}
-                        </p>
-                        <p className="text-md">
-                            {t("about-section.description-p2")}
-                        </p>
-                    </div>
-                </Slide>
-                <Slide classProps="w-full order-first lg:w-1/2 lg:order-none">
-                    <div className="w-full" tabIndex={0}>
-                        <Image
-                            tabIndex={0}
-                            src="/images/michael-pellegrini.webp"
-                            alt="Michael Pellegrini"
-                            width={1200}
-                            height={1799}
-                            className="h-auto w-full object-cover"
-                        />
-                    </div>
-                </Slide>
+            <div className="w-full max-w-[2000px] flex flex-col lg:flex-row items-start">
+                <div className="w-full order-first lg:w-1/2 lg:order-none">
+                    <Slide>
+                        <div tabIndex={0}>
+                            <Image
+                                tabIndex={0}
+                                src="/images/michael-pellegrini.webp"
+                                alt="Michael Pellegrini"
+                                width={1200}
+                                height={1799}
+                                className="h-auto w-full object-cover"
+                            />
+                        </div>
+                    </Slide>
+                </div>
+                <div className="w-full lg:w-1/2 pt-10 px-10 lg:px-20">
+                    <Slide>
+                        <div tabIndex={0}>
+                            <Headings title={t("about-section.title")} type="h2" className="text-start mb-12" slide />
+                            <p className="text-md mb-6">
+                                {t("about-section.description-p1")}
+                            </p>
+                            <p className="text-md">
+                                {t("about-section.description-p2")}
+                            </p>
+                        </div>
+                    </Slide>
+                </div>
             </div>
             <WaveDivider position="bottom" />
         </section>

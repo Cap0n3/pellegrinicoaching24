@@ -4,11 +4,13 @@ import React, { useRef, useEffect, useState, cloneElement } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
 import useScroll from "@/hooks/useScroll";
 import { debounce } from "@/utils/debounce";
+import { cn } from "@/lib/utils";
 
 interface SlideProps {
     children: React.ReactElement<{ className?: string }>;
     delay?: number;
-    classProps?: string;
+    className?: string;
+    props?: any;
 }
 
 /**
@@ -31,7 +33,7 @@ interface SlideProps {
  * };
  * ```
  */
-const Slide: React.FC<SlideProps> = ({ children, delay = 0, classProps }) => {
+const Slide: React.FC<SlideProps> = ({ children, delay = 0, className, ...props }) => {
     // Default delay is 300ms
     const containerRef = useRef<HTMLDivElement>(null);
     const [containerPosition, setContainerPosition] = useState<number>(0);
@@ -94,7 +96,8 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, classProps }) => {
     return (
         <div
             ref={containerRef}
-            className={`${show && "animate-slidein [--slidein-delay:300ms]"} opacity-0 ${classProps}`}
+            className={cn(show && "animate-slidein [--slidein-delay:300ms]", "opacity-0", className)}
+            {...props}
         >
             {children}
         </div>

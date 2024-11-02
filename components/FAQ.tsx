@@ -56,7 +56,7 @@ export default function FAQSection({
         <div
             className={`flex min-h-[250px] w-full items-center justify-center p-6 lg:w-2/3 xl:w-1/2 ${!inverted ? "md:pl-12" : "md:pr-12"}`}
         >
-            <Slide classProps="w-full">
+            <Slide className="w-full">
                 <div aria-label="FAQ section" tabIndex={0}>
                     <h2 className="mb-4 text-2xl font-bold">{t("title")}</h2>
                     <Accordion type="single" collapsible className="w-full">

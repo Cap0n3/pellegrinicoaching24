@@ -132,7 +132,7 @@ export default function Pricings({ contrast = false }: { contrast?: boolean }) {
                 <Slide
                     delay={index * 300}
                     key={index}
-                    classProps="w-full md:w-auto"
+                    className="w-full md:w-auto"
                 >
                     <PricingCard
                         logo={LogoSelector(t(`${key}.logo`))}
