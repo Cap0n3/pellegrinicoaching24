@@ -15,11 +15,11 @@ export default function AboutSection({ contrast = false }: Props) {
 
     return (
         <section
-            className={`relative w-full px-10 pt-10 pb-40 lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={`relative w-full pb-32 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
         >
-            <div className="mx-auto max-w-screen-xl items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <Slide>
-                    <div className="mt-4 md:mt-0" tabIndex={0}>
+            <div className="w-full flex flex-col lg:flex-row items-start">
+                <Slide classProps="w-full lg:w-1/2">
+                    <div className="px-10 pt-10 w-full border-2" tabIndex={0}>
                         <Headings title={t("about-section.title")} type="h2" className="text-start mb-12" slide />
                         <p className="text-md mb-6">
                             {t("about-section.description-p1")}
@@ -29,15 +29,15 @@ export default function AboutSection({ contrast = false }: Props) {
                         </p>
                     </div>
                 </Slide>
-                <Slide>
-                    <div className="" tabIndex={0}>
+                <Slide classProps="w-full order-first lg:w-1/2 lg:order-none">
+                    <div className="w-full" tabIndex={0}>
                         <Image
                             tabIndex={0}
                             src="/images/michael-pellegrini.webp"
                             alt="Michael Pellegrini"
                             width={1200}
                             height={1799}
-                            className="h-auto w-full object-cover rounded-lg"
+                            className="h-auto w-full object-cover"
                         />
                     </div>
                 </Slide>

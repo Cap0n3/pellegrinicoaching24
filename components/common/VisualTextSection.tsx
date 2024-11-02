@@ -24,7 +24,7 @@ export default function VisualTextSection({
     wave = false,
 }: SectionProps) {
     const imageBlock = (
-        <div className="order-first w-full :order-none lg:w-1/2">
+        <div className="order-first w-full lg:order-none lg:w-1/2">
             {imageLink && (
                 <Slide>
                     <Image
