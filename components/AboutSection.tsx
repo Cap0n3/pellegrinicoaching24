@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Headings from "@/components/common/Headings";
 import WaveDivider from "./common/WaveDivider";
+import { cn } from "@/lib/utils";
 
 type Props = {
     contrast?: boolean;
@@ -15,7 +16,7 @@ export default function AboutSection({ contrast = false }: Props) {
 
     return (
         <section
-            className={`relative w-full pb-24 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={cn("relative w-full pb-10 lg:pb-20", contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800")}
         >
             <div className="w-full max-w-[2000px] flex flex-col lg:flex-row items-start">
                 <div className="w-full order-first lg:w-1/2 lg:order-none">
@@ -46,7 +47,6 @@ export default function AboutSection({ contrast = false }: Props) {
                     </Slide>
                 </div>
             </div>
-            <WaveDivider position="bottom" />
         </section>
     );
 }

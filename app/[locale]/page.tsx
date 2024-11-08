@@ -3,7 +3,6 @@ import Features from "@/components/Features";
 import DefaultFeatures from "@/components/DefaultFeatures";
 import Hero from "@/components/Hero";
 import ScrollResetter from "@/components/common/ScrollResetter";
-import CTA from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import ParallaxSection from "@/components/Parallax";
 import Pricings from "@/components/Pricings";
@@ -12,6 +11,7 @@ import { useTranslations } from "next-intl";
 import About from "./about/page";
 import AboutSection from "@/components/AboutSection";
 import SocialProof from "@/components/SocialProof";
+import CTA from "@/components/CTA";
 
 export default function Home() {
     const t = useTranslations("HomePage");
@@ -52,8 +52,14 @@ export default function Home() {
                 contrast
             />
             <ParallaxSection img="/images/parallax.webp" />
-            <AboutSection />
-            <SocialProof contrast />
+            <AboutSection contrast />
+            <SocialProof wave />
+            <CTA
+                id="cta"
+                title="Take Action"
+                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan dolor."
+                contrast
+            />
             <Testimonials />
             <FAQSection
                 id="faq"

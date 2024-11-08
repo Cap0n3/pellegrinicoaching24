@@ -4,19 +4,29 @@ import { Eye } from 'lucide-react';
 import Slide from "@/components/common/Slide";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-
+import WaveDivider from "@/components/common/WaveDivider";
+import { cn } from "@/lib/utils";
 
 type Props = {
     contrast?: boolean;
+    wave?: boolean;
 }
 
 export default function SocialProof({
-    contrast = false
+    contrast = false,
+    wave = false
 }: Props) {
     const t = useTranslations("HomePage");
     
     return (
-        <section className={`w-full px-10 py-10 lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}>
+        <section 
+            className={
+                cn("relative w-full px-10 py-20 lg:px-20", 
+                    contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800",
+                    wave ? "py-28 lg:py-40" : "py-10"
+                )}    
+        >
+            {wave && <WaveDivider position="top" />}
             <Headings title={t("social-proof.title")} type="h2" slide />
             <Headings
                 title={t("social-proof.description")}
@@ -56,6 +66,8 @@ export default function SocialProof({
                     />
                 </div>
             </Slide>
+            <WaveDivider position="bottom" />
+            {wave && <WaveDivider position="bottom" />}
         </section>
     )
 }

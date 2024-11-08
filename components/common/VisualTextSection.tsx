@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Slide from "./Slide";
+import Slide from "@/components/common/Slide";
 import Headings from "@/components/common/Headings";
-import WaveDivider from "./WaveDivider";
+import WaveDivider from "@/components/common/WaveDivider";
+import { cn } from "@/lib/utils";
 
 interface SectionProps {
     id: string;
@@ -42,7 +43,7 @@ export default function VisualTextSection({
 
     const textBlock = (
         <div
-            className={`flex min-h-[250px] w-full items-center justify-center p-6 lg:w-1/2 ${!inverted ? "lg:pl-12" : "lg:pr-12"}`}
+            className={cn("flex min-h-[250px] w-full items-center justify-center p-6 lg:w-1/2", !inverted ? "lg:pl-12" : "lg:pr-12")}
         >
             <Slide>
                 <div tabIndex={0}>
@@ -56,7 +57,11 @@ export default function VisualTextSection({
     return (
         <section
             id={id}
-            className={`relative flex w-full items-center justify-center px-10 ${wave ? "py-28 lg:py-40" : "py-10"} lg:px-20 ${contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"}`}
+            className={
+                cn("relative flex w-full items-center justify-center px-10 lg:px-20", 
+                    contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800",
+                    wave ? "py-28 lg:py-40" : "py-10"
+                )}
         >
             {wave && <WaveDivider position="top" />}
             <div
