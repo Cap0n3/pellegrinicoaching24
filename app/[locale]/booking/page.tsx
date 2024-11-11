@@ -19,7 +19,7 @@ export default function Booking() {
     };
 
     return (
-        <main className="w-full bg-white">
+        <main className="flex w-full min-h-screen flex-col items-center justify-center dark:bg-gray-800">
             <PageHeader title={t("title")} />
             <section className="flex flex-col items-center justify-center bg-white px-10 py-10 lg:py-0 lg:pb-10 lg:pt-20">
                 <p className="mb-5 text-start text-gray-600 md:text-center">
