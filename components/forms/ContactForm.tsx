@@ -162,7 +162,7 @@ export default function ContactForm(): JSX.Element {
                     ]}
                     {...register("subject")}
                 />
-                <fieldset className="mb-5 flex flex-row items-center justify-start gap-3">
+                <fieldset className="mb-5 flex flex-col md:flex-row md:items-center md:justify-start gap-3">
                     <legend className="mb-3 block text-sm font-medium text-primary">
                         {t("modality")}
                     </legend>
