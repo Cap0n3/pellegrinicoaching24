@@ -9,6 +9,7 @@ interface CTAProps {
     id: string;
     title: string;
     paragraph: string;
+    cta: string;
     contrast?: boolean;
     wave?: boolean;
 }
@@ -17,21 +18,20 @@ export default function CTA({
     id,
     title,
     paragraph,
+    cta,
     contrast = false,
     wave = false,
 }: CTAProps) {
+
     const textBlock = (
         <div
             className={cn("flex w-full items-center justify-center", contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800")}
         >
             <Slide>
-                <div tabIndex={0}>
-                    <Headings title={title} type="h2" className="mb-6 text-start" />
-                    <p className="text-md mb-6">{paragraph}</p>
-                    <div className="flex gap-4 flex-col lg:flex-row">
-                        <Button aria-label="cta" className="mt-6 bg-mp-dark-blue">Primary Action</Button>
-                        <Button variant="outline" className="mt-6 border-mp-dark-blue">Secondary Action</Button>
-                    </div>
+                <div tabIndex={0} className="flex flex-col gap-4">
+                    <Headings title={title} type="h2" className="text-start" />
+                    <p className="text-md">{paragraph}</p>
+                    <Button aria-label="cta" className="w-44 mt-6 bg-mp-dark-blue">{cta}</Button>
                 </div>
             </Slide>
         </div>

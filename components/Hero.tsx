@@ -20,7 +20,7 @@ export default function Hero() {
                 className="max-w-[500px] md:max-w-none lg:w-[800px] md:w-[600px] flex flex-col items-start justify-center"
                 tabIndex={0}
             >
-                <Headings title={t("title")} type="h1" className="text-start" slide />
+                <Headings title={t("title")} type="h1" className="text-start uppercase" slide />
                 <Headings
                     title={t("description")}
                     type="h6"

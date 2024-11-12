@@ -10,7 +10,7 @@
     "HomePage": {
         "title": "Move from inspiration to action",
         "description": "Michael Pellegrini, certified life coach, helps you unleash your creative potential and transform your life by tapping into your inspiration.",
-        "cta": "Learn more",
+        "cta": "Make an appointment",
         "ariaLabel": "Hero header of the home page",
         "features": {
             "cta": "Learn more",
@@ -131,6 +131,11 @@
                 "link": "/",
                 "featured": "false"
             }
+        },
+        "cta-section": {
+            "title": "Unleash Your Creative Potential",
+            "description": "Take the first step towards artistic fulfilment - Join my coaching programme",
+            "cta": "Make an appointment"
         },
         "faq": {
             "title": "Frequently asked questions",

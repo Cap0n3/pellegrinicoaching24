@@ -1,6 +1,6 @@
 import "@/app/styles/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
 import { Providers } from "@/contexts/ParaProvider";
 import Navbar from "@/components/common/Navbar";
@@ -8,15 +8,18 @@ import Footer from "@/components/common/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
-    title: "My Landing Page",
-    description: "This is a landing page template",
-    keywords: "landing page, template, nextjs",
+    title: "MP Coaching",
+    description: "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+    keywords: "Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
     openGraph: {
         type: "website",
-        locale: "en_US",
+        locale: "fr_FR",
         url: "https://example.com",
         images: [
             {
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
                 alt: "Og Image Alt",
             },
         ],
-        siteName: "My Landing Page",
+        siteName: "MP Coaching",
     },
 };
 
@@ -42,7 +45,7 @@ export default async function LocaleLayout({
 
     return (
         <html className="scroll-smooth" lang={locale} suppressHydrationWarning>
-            <body className={inter.className}>
+            <body className={montserrat.className}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"

@@ -56,8 +56,9 @@ export default function Home() {
             <SocialProof wave />
             <CTA
                 id="cta"
-                title="Take Action"
-                paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan dolor."
+                title={t("cta-section.title")}
+                paragraph={t("cta-section.description")}
+                cta={t("cta-section.cta")}
                 contrast
             />
             <Testimonials />

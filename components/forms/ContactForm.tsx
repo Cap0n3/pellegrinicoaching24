@@ -188,8 +188,8 @@ export default function ContactForm(): JSX.Element {
                 <InputField
                     id="contact_fname"
                     type="text"
-                    label={t("fname")}
-                    placeholder={t("fname") + " *"}
+                    label={t("fname") + " *"}
+                    placeholder={t("fname")}
                     {...register("fname", {
                         required: t("required"),
                         minLength: { value: 2, message: t("minLength") },

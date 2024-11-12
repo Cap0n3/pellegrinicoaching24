@@ -137,6 +137,11 @@
                 "featured": "false"
             }
         },
+        "cta-section": {
+            "title": "Libérez votre potentiel créatif",
+            "description": "Faites le premier pas vers votre épanouissement artistique – Rejoignez mon programme de coaching",
+            "cta": "Prendre rendez-vous"
+        },
         "faq": {
             "title": "Questions fréquentes",
             "questions": {
