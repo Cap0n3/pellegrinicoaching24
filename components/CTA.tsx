@@ -3,6 +3,7 @@ import Slide from "@/components/common/Slide";
 import Headings from "@/components/common/Headings";
 import WaveDivider from "@/components/common/WaveDivider";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/navigation";
 import { cn } from "@/lib/utils";
 
 interface CTAProps {
@@ -31,7 +32,9 @@ export default function CTA({
                 <div tabIndex={0} className="flex flex-col gap-4">
                     <Headings title={title} type="h2" className="text-start" />
                     <p className="text-md">{paragraph}</p>
-                    <Button aria-label="cta" className="w-44 mt-6 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90">{cta}</Button>
+                    <Link href="/contact" prefetch={false}>
+                        <Button aria-label="cta" className="w-44 mt-6 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90">{cta}</Button>
+                    </Link>
                 </div>
             </Slide>
         </div>

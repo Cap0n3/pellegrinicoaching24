@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import Slide from "@/components/common/Slide";
 import Headings from "@/components/common/Headings";
 import WaveDivider from "./common/WaveDivider";
+import { Link } from "@/navigation";
 
 /**
  * Hero section component for the homepage.
@@ -28,9 +29,11 @@ export default function Hero() {
                     slide
                 />
                 <Slide delay={300}>
-                    <Button aria-label={t("cta")} className="mt-6 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90">
-                        {t("cta")}
-                    </Button>
+                    <Link href="/contact" prefetch={false}>
+                        <Button aria-label={t("cta")} className="mt-6 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90">
+                            {t("cta")}
+                        </Button>
+                    </Link>
                 </Slide>
             </div>
             <WaveDivider position="bottom" />
