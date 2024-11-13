@@ -22,7 +22,7 @@ export default function Contact() {
     return (
         <main className="w-full flex min-h-screen flex-col items-center justify-center bg-mp-light-beige dark:bg-gray-900">
             <PageHeader title="" imageUrl={theme === "dark" ? "/images/header_contact_dark.webp" : "/images/header_contact.webp"} />
-            <section className="m-10 flex max-w-[2000px] flex-col justify-center gap-8 overflow-hidden rounded-lg bg-zinc-100 dark:bg-gray-800 md:m-20 lg:flex-row lg:gap-0">
+            <section className="m-10 flex w-3/4 max-w-[2500px] flex-col justify-center gap-8 overflow-hidden rounded-lg bg-zinc-100 dark:bg-gray-800 md:m-20 lg:flex-row lg:gap-0">
                 <div className="order-first w-full p-10 lg:order-none lg:w-1/2">
                     <h2 className="mb-10 text-center text-xl font-medium leading-6 text-gray-900 dark:text-white">
                         {t("title")}
