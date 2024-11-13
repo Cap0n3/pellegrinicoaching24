@@ -62,12 +62,10 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, className, ...props 
     // Function to update the container position and view status
     const updatePosition = () => {
         if (containerRef.current) {
-            // const containerPosition = containerRef.current.offsetTop;
-            // setContainerPosition(containerPosition);
             const containerPosition = getOffsetTop(containerRef.current);
             
             const bottomScroll = scrollPosition + windowSize.innerHeight;
-            if (containerPosition <= bottomScroll) {
+            if (containerPosition < bottomScroll) {
                 setIsInView(true);
             }
         }

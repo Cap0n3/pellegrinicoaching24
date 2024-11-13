@@ -35,7 +35,7 @@ export default function Contact() {
                     </h2>
                     <Tabs
                         defaultValue="address"
-                        className="w-3/4 max-w-[600px]"
+                        className="w-[200px] md:w-[400px]"
                     >
                         <TabsList className="grid w-full grid-cols-2">
                             <TabsTrigger value="address">Address</TabsTrigger>
@@ -44,14 +44,14 @@ export default function Contact() {
                         <TabsContent value="address">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle className="flex flex-row gap-2 mb-4">
+                                    <CardTitle className="flex flex-row gap-2 mb-4 text-lg">
                                         <House /> {t("address_title")}
                                     </CardTitle>
                                     <CardDescription>
                                         {t("address_description")}
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent>
+                                <CardContent className="text-sm">
                                     <address>
                                         {t("address")}
                                     </address>
@@ -61,14 +61,14 @@ export default function Contact() {
                         <TabsContent value="phone">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle className="flex flex-row gap-2 mb-4">
+                                    <CardTitle className="flex flex-row gap-2 mb-4 text-lg">
                                         <Phone /> {t("business_phone_title")}
                                     </CardTitle>
                                     <CardDescription>
                                         {t("business_phone_description")}
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="space-y-2">
+                                <CardContent className="text-sm">
                                     <p>{t("business_phone")}</p>
                                 </CardContent>
                             </Card>

@@ -106,7 +106,7 @@ export default function Footer() {
                     tabIndex={0}
                     aria-label="© Copyright 2024 CompanyName | Designed & Coded with love by Alexandre Guillin | All Rights Reserved"
                 >
-                    © Copyright 2024 CompanyName | Designed & Coded with love
+                    © Copyright 2024 MP Coaching | Designed & Coded with love
                     by{" "}
                     <a
                         href="https://www.malt.ch/profile/alexandreguillin"
