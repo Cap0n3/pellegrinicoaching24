@@ -40,8 +40,14 @@ export default function AboutSection({ contrast = false }: Props) {
                             <p className="text-md mb-6">
                                 {t("about-section.description-p1")}
                             </p>
-                            <p className="text-md">
+                            <p className="text-md mb-6">
                                 {t("about-section.description-p2")}
+                            </p>
+                            <p className="text-md mb-6">
+                                {t("about-section.description-p3")}
+                            </p>
+                            <p className="text-md">
+                                {t("about-section.description-p4")}
                             </p>
                         </div>
                     </Slide>
