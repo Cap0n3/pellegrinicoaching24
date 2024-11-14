@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/contexts/ThemeProvider";
 import { Providers } from "@/contexts/ParaProvider";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+import ScrollTop from "@/components/common/ScrollToTop";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
                             <Navbar />
                             {children}
                             <Footer />
+                            <ScrollTop />
                         </Providers>
                     </ThemeProvider>
                 </NextIntlClientProvider>
