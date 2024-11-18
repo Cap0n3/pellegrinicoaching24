@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -88,11 +89,22 @@ const config = {
                         transform: "translateY(0)",
                     },
                 },
+                fadein: {
+                    from: {
+                        opacity: "0",
+                        transform: "translateX(-20px)",
+                    },
+                    to: {
+                        opacity: "1",
+                        transform: "translateX(0)",
+                    },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
                 slidein: "slidein 1s ease var(--slidein-delay, 0) forwards",
+                fadein: "fadein var(--fadein-duration, 1s) ease forwards",
             },
             backgroundImage: {
                 hero: "url('/images/hero_mpcoaching_optimized.webp')",

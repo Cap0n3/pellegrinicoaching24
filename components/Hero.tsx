@@ -6,6 +6,8 @@ import Headings from "@/components/common/Headings";
 import WaveDivider from "./common/WaveDivider";
 import { Link } from "@/navigation";
 
+import AnimatedHeadings from "@/components/common/AnimatedHeadings";
+
 /**
  * Hero section component for the homepage.
  */
@@ -21,6 +23,7 @@ export default function Hero() {
                 className="max-w-[500px] md:max-w-none lg:w-[800px] md:w-[600px] flex flex-col items-start justify-center"
                 tabIndex={0}
             >
+                <AnimatedHeadings type="h2" title="Hello you crazy dude !" />
                 <Headings title={t("title")} type="h1" className="text-start uppercase" slide />
                 <Headings
                     title={t("description")}
