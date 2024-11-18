@@ -28,7 +28,7 @@ export default function AboutSection({ contrast = false }: Props) {
                                 alt="Michael Pellegrini"
                                 width={1200}
                                 height={1799}
-                                className="h-auto w-full object-cover"
+                                className="h-auto w-full object-cover rounded-br-lg"
                             />
                         </div>
                     </Slide>
