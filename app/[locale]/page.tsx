@@ -143,7 +143,52 @@ export default function Home() {
                 cta={t("cta-section.cta")}
                 contrast
             />
-            <Testimonials />
+            <Testimonials
+                testimonialData={[
+                    {
+                        avatar: t("testimonials.testimonial-one.image"),
+                        author: t("testimonials.testimonial-one.author"),
+                        role: t("testimonials.testimonial-one.role"),
+                        rating: t("testimonials.testimonial-one.rating"),
+                        quote: t("testimonials.testimonial-one.quote"),
+                    },
+                    {
+                        avatar: t("testimonials.testimonial-two.image"),
+                        author: t("testimonials.testimonial-two.author"),
+                        role: t("testimonials.testimonial-two.role"),
+                        rating: t("testimonials.testimonial-two.rating"),
+                        quote: t("testimonials.testimonial-two.quote"),
+                    },
+                    {
+                        avatar: t("testimonials.testimonial-three.image"),
+                        author: t("testimonials.testimonial-three.author"),
+                        role: t("testimonials.testimonial-three.role"),
+                        rating: t("testimonials.testimonial-three.rating"),
+                        quote: t("testimonials.testimonial-three.quote"),
+                    },
+                    {
+                        avatar: t("testimonials.testimonial-four.image"),
+                        author: t("testimonials.testimonial-four.author"),
+                        role: t("testimonials.testimonial-four.role"),
+                        rating: t("testimonials.testimonial-four.rating"),
+                        quote: t("testimonials.testimonial-four.quote"),
+                    },
+                    {
+                        avatar: t("testimonials.testimonial-five.image"),
+                        author: t("testimonials.testimonial-five.author"),
+                        role: t("testimonials.testimonial-five.role"),
+                        rating: t("testimonials.testimonial-five.rating"),
+                        quote: t("testimonials.testimonial-five.quote"),
+                    },
+                    {
+                        avatar: t("testimonials.testimonial-six.image"),
+                        author: t("testimonials.testimonial-six.author"),
+                        role: t("testimonials.testimonial-six.role"),
+                        rating: t("testimonials.testimonial-six.rating"),
+                        quote: t("testimonials.testimonial-six.quote"),
+                    },
+                ]}
+            />
             <FAQSection
                 id="faq"
                 title={"FAQ"}
