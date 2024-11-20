@@ -6,13 +6,14 @@ import Hero from "@/components/Hero";
 import ScrollResetter from "@/components/common/ScrollResetter";
 import Testimonials from "@/components/Testimonials";
 import ParallaxSection from "@/components/Parallax";
-import Pricings from "@/components/Pricings";
 import FAQSection from "@/components/FAQ";
 import { useTranslations } from "next-intl";
-import About from "./about/page";
 import AboutSection from "@/components/AboutSection";
 import SocialProof from "@/components/SocialProof";
 import CTA from "@/components/CTA";
+//import Features from "@/components/Features";
+//import Pricings from "@/components/Pricings";
+//import { CircleCheckBig, ThumbsUp, Luggage } from "lucide-react";
 
 export default function Home() {
     const t = useTranslations("HomePage");
@@ -191,8 +192,26 @@ export default function Home() {
             />
             <FAQSection
                 id="faq"
-                title={"FAQ"}
+                title={t("faq.title")}
                 imageLink="/images/question.webp"
+                faqData={[
+                    {
+                        question: t("faq.questions.question-one.question"),
+                        answer: t("faq.questions.question-one.answer"),
+                    },
+                    {
+                        question: t("faq.questions.question-two.question"),
+                        answer: t("faq.questions.question-two.answer"),
+                    },
+                    {
+                        question: t("faq.questions.question-three.question"),
+                        answer: t("faq.questions.question-three.answer"),
+                    },
+                    {
+                        question: t("faq.questions.question-four.question"),
+                        answer: t("faq.questions.question-four.answer"),
+                    },
+                ]}
                 contrast
             />
         </main>

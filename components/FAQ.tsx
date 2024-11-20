@@ -7,14 +7,40 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useTranslations } from "next-intl";
 
 interface SectionProps {
     id: string;
     imageLink?: string;
     title: string;
+    faqData: { question: string; answer: string }[];
     contrast?: boolean;
     inverted?: boolean;
+}
+
+type FAQItemProps = {
+    index: number;
+    question: string;
+    answer: string;
+};
+
+function FAQItem({ index, question, answer }: FAQItemProps) {
+    return (
+        <AccordionItem
+            value={`item-${index + 1}`}
+            aria-label="Accordion item"
+        >
+            <AccordionTrigger
+                className="text-start hover:no-underline"
+                tabIndex={0}
+                aria-label="Accordion trigger"
+            >
+                {question}
+            </AccordionTrigger>
+            <AccordionContent tabIndex={0} className="text-start">
+                {answer}
+            </AccordionContent>
+        </AccordionItem>
+    );
 }
 
 /**
@@ -24,16 +50,10 @@ export default function FAQSection({
     id,
     imageLink,
     title,
+    faqData,
     contrast = false,
     inverted = false,
 }: SectionProps) {
-    const t = useTranslations("HomePage.faq");
-    const keys = [
-        "question-one",
-        "question-two",
-        "question-three",
-        "question-four",
-    ] as const;
 
     const imageBlock = (
         <div className="order-first w-full lg:order-none lg:w-1/3 xl:w-1/2">
@@ -52,41 +72,6 @@ export default function FAQSection({
         </div>
     );
 
-    const faqBlock = (
-        <div
-            className={`flex min-h-[250px] w-full items-center justify-center p-6 lg:w-2/3 xl:w-1/2 ${!inverted ? "md:pl-12" : "md:pr-12"}`}
-        >
-            <Slide className="w-full">
-                <div aria-label="FAQ section" tabIndex={0}>
-                    <h2 className="mb-4 text-2xl font-bold">{t("title")}</h2>
-                    <Accordion type="single" collapsible className="w-full">
-                        {keys.map((key, index) => (
-                            <AccordionItem
-                                key={key}
-                                value={`item-${index}`}
-                                aria-label="Accordion item"
-                            >
-                                <AccordionTrigger
-                                    className="text-start hover:no-underline"
-                                    tabIndex={0}
-                                    aria-label="Accordion trigger"
-                                >
-                                    {t(`questions.${key}.question`)}
-                                </AccordionTrigger>
-                                <AccordionContent
-                                    tabIndex={0}
-                                    className="text-start"
-                                >
-                                    {t(`questions.${key}.answer`)}
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
-                </div>
-            </Slide>
-        </div>
-    );
-
     return (
         <section
             id={id}
@@ -96,7 +81,31 @@ export default function FAQSection({
                 className={`flex w-full max-w-[2000px] flex-col items-center justify-center lg:flex-row ${inverted ? "lg:flex-row-reverse" : ""}`}
             >
                 {imageBlock}
-                {faqBlock}
+                <div
+                    className={`flex min-h-[250px] w-full items-center justify-center p-6 lg:w-2/3 xl:w-1/2 ${!inverted ? "md:pl-12" : "md:pr-12"}`}
+                >
+                    <Slide className="w-full">
+                        <div aria-label="FAQ section" tabIndex={0}>
+                            <h2 className="mb-4 text-2xl font-bold">
+                                {title}
+                            </h2>
+                            <Accordion
+                                type="single"
+                                collapsible
+                                className="w-full"
+                            >
+                                {faqData.map((item, index) => (
+                                    <FAQItem
+                                        key={index}
+                                        index={index}
+                                        question={item.question}
+                                        answer={item.answer}
+                                    />
+                                ))}
+                            </Accordion>
+                        </div>
+                    </Slide>
+                </div>
             </div>
         </section>
     );
