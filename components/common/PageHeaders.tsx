@@ -20,8 +20,8 @@ export default function PageHeader({ title, imageUrl }: ImageHeaderProps) {
                     src={imageUrl}
                     alt={title}
                     style={{
-                        objectFit:"cover",
-                        objectPosition:"center",
+                        objectFit: "cover",
+                        objectPosition: "center",
                     }}
                     fill
                 />

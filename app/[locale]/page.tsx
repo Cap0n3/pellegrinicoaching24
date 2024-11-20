@@ -1,5 +1,6 @@
 import VisualTextSection from "@/components/common/VisualTextSection";
 import Features from "@/components/Features";
+import { BadgePlus, Eye, Umbrella, Brush, Earth } from "lucide-react";
 import DefaultFeatures from "@/components/DefaultFeatures";
 import Hero from "@/components/Hero";
 import ScrollResetter from "@/components/common/ScrollResetter";
@@ -17,20 +18,57 @@ export default function Home() {
     const t = useTranslations("HomePage");
 
     return (
-        <main className="flex w-full min-h-screen flex-col items-center justify-center dark:bg-gray-800">
+        <main className="flex min-h-screen w-full flex-col items-center justify-center dark:bg-gray-800">
             <ScrollResetter />
-            <Hero />
-            <DefaultFeatures contrast />
+            <Hero
+                title={t("hero.title")}
+                description={t("hero.description")}
+                cta={t("hero.cta")}
+                ariaLabel={t("hero.aria-label")}
+            />
+            <DefaultFeatures
+                featuresData={[
+                    {
+                        logo: <Eye size={30} />,
+                        title: t("features.feature-one.title"),
+                        description: t("features.feature-one.description"),
+                        cta: t("features.cta"),
+                        link: "#feature1",
+                    },
+                    {
+                        logo: <Umbrella size={30} />,
+                        title: t("features.feature-two.title"),
+                        description: t("features.feature-two.description"),
+                        cta: t("features.cta"),
+                        link: "#feature2",
+                    },
+                    {
+                        logo: <Brush size={30} />,
+                        title: t("features.feature-three.title"),
+                        description: t("features.feature-three.description"),
+                        cta: t("features.cta"),
+                        link: "#feature3",
+                    },
+                    {
+                        logo: <Earth size={30} />,
+                        title: t("features.feature-four.title"),
+                        description: t("features.feature-four.description"),
+                        cta: t("features.cta"),
+                        link: "#feature4",
+                    },
+                ]}
+                contrast
+            />
             <VisualTextSection
                 id="feature1"
-                imageLink="/images/showcase_one_optimized.webp"
+                img="/images/showcase_one_optimized.webp"
                 title={t("showcase-one.title")}
                 paragraph={t("showcase-one.description")}
                 wave
             />
             <VisualTextSection
                 id="feature2"
-                imageLink="/images/showcase_two_optimized.webp"
+                img="/images/showcase_two_optimized.webp"
                 title={t("showcase-two.title")}
                 paragraph={t("showcase-two.description")}
                 inverted
@@ -38,22 +76,66 @@ export default function Home() {
             />
             <VisualTextSection
                 id="feature3"
-                imageLink="/images/showcase_three_optimized.webp"
+                img="/images/showcase_three_optimized.webp"
                 title={t("showcase-three.title")}
                 paragraph={t("showcase-three.description")}
                 wave
             />
             <VisualTextSection
                 id="feature4"
-                imageLink="/images/showcase_four_optimized.webp"
+                img="/images/showcase_four_optimized.webp"
                 title={t("showcase-four.title")}
                 paragraph={t("showcase-four.description")}
                 inverted
                 contrast
             />
             <ParallaxSection img="/images/parallax.webp" />
-            <AboutSection contrast />
-            <SocialProof wave />
+            <AboutSection
+                title={t("about-section.title")}
+                paragraphs={[
+                    t("about-section.description-p1"),
+                    t("about-section.description-p2"),
+                    t("about-section.description-p3"),
+                    t("about-section.description-p4"),
+                ]}
+                img="/images/michael-pellegrini.webp"
+                contrast
+            />
+            <SocialProof
+                title={t("social-proof.title")}
+                description={t("social-proof.description")}
+                brandLogos={[
+                    {
+                        src: "/images/logos/Wakan_Logo.webp",
+                        alt: "Wakan Logo",
+                        width: 300,
+                        height: 337,
+                        className: "w-20",
+                    },
+                    {
+                        src: "/images/logos/CCE_Logo.webp",
+                        alt: "CCE",
+                        width: 359,
+                        height: 349,
+                        className: "w-20",
+                    },
+                    {
+                        src: "/images/logos/Eduqua_Logo.webp",
+                        alt: "Eduqua",
+                        width: 908,
+                        height: 388,
+                        className: "w-56",
+                    },
+                    {
+                        src: "/images/logos/LesInvisibles_Logo.webp",
+                        alt: "Les Invisibles",
+                        width: 393,
+                        height: 335,
+                        className: "w-24",
+                    },
+                ]}
+                wave
+            />
             <CTA
                 id="cta"
                 title={t("cta-section.title")}

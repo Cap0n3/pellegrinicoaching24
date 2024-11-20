@@ -33,7 +33,12 @@ interface SlideProps {
  * };
  * ```
  */
-const Slide: React.FC<SlideProps> = ({ children, delay = 0, className, ...props }) => {
+const Slide: React.FC<SlideProps> = ({
+    children,
+    delay = 0,
+    className,
+    ...props
+}) => {
     // Default delay is 300ms
     const containerRef = useRef<HTMLDivElement>(null);
     const [containerPosition, setContainerPosition] = useState<number>(0);
@@ -45,7 +50,7 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, className, ...props 
     /**
      * Function to get the offset top of a relative positionned element.
      * Note: Not possible to use `element.offsetTop` because it returns the offset top relative to the offsetParent.
-     * 
+     *
      * @param element - The element to get the offset top.
      * @returns The offset top of the element.
      */
@@ -57,13 +62,12 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, className, ...props 
         }
         return offsetTop;
     };
-    
 
     // Function to update the container position and view status
     const updatePosition = () => {
         if (containerRef.current) {
             const containerPosition = getOffsetTop(containerRef.current);
-            
+
             const bottomScroll = scrollPosition + windowSize.innerHeight;
             if (containerPosition < bottomScroll) {
                 setIsInView(true);
@@ -94,7 +98,11 @@ const Slide: React.FC<SlideProps> = ({ children, delay = 0, className, ...props 
     return (
         <div
             ref={containerRef}
-            className={cn(show && "animate-slidein [--slidein-delay:300ms]", "opacity-0", className)}
+            className={cn(
+                show && "animate-slidein [--slidein-delay:300ms]",
+                "opacity-0",
+                className
+            )}
             {...props}
         >
             {children}

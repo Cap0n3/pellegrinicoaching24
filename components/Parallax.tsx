@@ -11,9 +11,7 @@ type ParallaxSectionProps = {
 /**
  * Parallax banner component.
  */
-export default function ParallaxSection({
-    img,
-}: ParallaxSectionProps) {
+export default function ParallaxSection({ img }: ParallaxSectionProps) {
     const [isMobile, setIsMobile] = useState(false);
     const windowSize = useWindowSize();
 
@@ -35,7 +33,7 @@ export default function ParallaxSection({
                 className="aspect-[2/1] h-[500px]"
             />
         );
-    }
+    };
 
     const DesktopParallax = () => {
         return (
@@ -44,11 +42,7 @@ export default function ParallaxSection({
                 tabIndex={0}
             ></div>
         );
-    }
+    };
 
-    return (
-        <>
-            {isMobile ? <MobileParallax /> : <DesktopParallax />}
-        </>
-    );
+    return <>{isMobile ? <MobileParallax /> : <DesktopParallax />}</>;
 }

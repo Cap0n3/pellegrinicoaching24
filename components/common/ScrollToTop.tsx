@@ -29,7 +29,7 @@ const ScrollTop = () => {
         <button
             aria-label="scroll back to top"
             onClick={handleClick}
-            className={`fixed bottom-4 left-4 p-3 rounded-full bg-mp-dark-blue text-white shadow-lg hover:bg-mp-dark-blue/90 transition ${
+            className={`fixed bottom-4 left-4 rounded-full bg-mp-dark-blue p-3 text-white shadow-lg transition hover:bg-mp-dark-blue/90 ${
                 showScrollBtn ? "flex" : "hidden"
             }`}
         >

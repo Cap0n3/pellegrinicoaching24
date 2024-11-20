@@ -67,13 +67,16 @@ export default function FAQSection({
                                 aria-label="Accordion item"
                             >
                                 <AccordionTrigger
-                                    className="hover:no-underline text-start"
+                                    className="text-start hover:no-underline"
                                     tabIndex={0}
                                     aria-label="Accordion trigger"
                                 >
                                     {t(`questions.${key}.question`)}
                                 </AccordionTrigger>
-                                <AccordionContent tabIndex={0} className="text-start">
+                                <AccordionContent
+                                    tabIndex={0}
+                                    className="text-start"
+                                >
                                     {t(`questions.${key}.answer`)}
                                 </AccordionContent>
                             </AccordionItem>

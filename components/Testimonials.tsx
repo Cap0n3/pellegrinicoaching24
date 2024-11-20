@@ -22,7 +22,31 @@ import RatingStars from "./RatingStars";
 import { RangedNumber } from "@/components/RatingStars";
 import WaveDivider from "./common/WaveDivider";
 
+type TestmonialCardProps = {
+    avatar?: string;
+    author: string;
+    role: string;
+    rating: number;
+    quote: string;
+};
 
+function TestimonialCard({
+    avatar,
+    author,
+    role,
+    rating,
+    quote,
+}: TestmonialCardProps) {
+    return;
+}
+
+/* ============== */
+/* Main component */
+/* ============== */
+
+/**
+ * Testimonials Section
+ */
 export default function Testimonials({
     contrast = false,
 }: {

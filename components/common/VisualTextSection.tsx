@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 interface SectionProps {
     id: string;
-    imageLink?: string;
+    img?: string;
     title: string;
     paragraph: string;
     contrast?: boolean;
@@ -17,7 +17,7 @@ interface SectionProps {
 
 export default function VisualTextSection({
     id,
-    imageLink,
+    img,
     title,
     paragraph,
     contrast = false,
@@ -26,11 +26,11 @@ export default function VisualTextSection({
 }: SectionProps) {
     const imageBlock = (
         <div className="order-first w-full lg:order-none lg:w-1/2">
-            {imageLink && (
+            {img && (
                 <Slide>
                     <Image
                         tabIndex={0}
-                        src={imageLink}
+                        src={img}
                         alt={title}
                         width={1200}
                         height={800}
@@ -43,11 +43,18 @@ export default function VisualTextSection({
 
     const textBlock = (
         <div
-            className={cn("flex min-h-[250px] w-full items-center justify-center p-6 lg:w-1/2", !inverted ? "lg:pl-12" : "lg:pr-12")}
+            className={cn(
+                "flex min-h-[250px] w-full items-center justify-center p-6 lg:w-1/2",
+                !inverted ? "lg:pl-12" : "lg:pr-12"
+            )}
         >
             <Slide>
                 <div tabIndex={0}>
-                    <Headings title={title} type="h3" className="mb-6 text-start" />
+                    <Headings
+                        title={title}
+                        type="h3"
+                        className="mb-6 text-start"
+                    />
                     <p className="text-md">{paragraph}</p>
                 </div>
             </Slide>
@@ -57,11 +64,13 @@ export default function VisualTextSection({
     return (
         <section
             id={id}
-            className={
-                cn("relative flex w-full items-center justify-center px-10 lg:px-20", 
-                    contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800",
-                    wave ? "py-28 lg:py-40" : "py-10"
-                )}
+            className={cn(
+                "relative flex w-full items-center justify-center px-10 lg:px-20",
+                contrast
+                    ? "bg-mp-light-beige dark:bg-gray-900"
+                    : "bg-white dark:bg-gray-800",
+                wave ? "py-28 lg:py-40" : "py-10"
+            )}
         >
             {wave && <WaveDivider position="top" />}
             <div

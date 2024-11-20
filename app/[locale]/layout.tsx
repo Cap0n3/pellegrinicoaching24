@@ -16,8 +16,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
     title: "MP Coaching",
-    description: "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
-    keywords: "Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
+    description:
+        "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+    keywords:
+        "Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
     openGraph: {
         type: "website",
         locale: "fr_FR",

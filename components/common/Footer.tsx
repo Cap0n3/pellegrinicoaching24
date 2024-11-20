@@ -14,7 +14,7 @@ export default function Footer() {
     const t = useTranslations("Navigation");
 
     return (
-        <footer className="relative w-full pt-28 lg:pt-40 pb-10 dark:bg-slate-700 sm:px-6 lg:px-8">
+        <footer className="relative w-full pb-10 pt-28 dark:bg-slate-700 sm:px-6 lg:px-8 lg:pt-40">
             <WaveDivider position="top" />
             <div className="flex flex-col items-center justify-center">
                 <Link href="/">

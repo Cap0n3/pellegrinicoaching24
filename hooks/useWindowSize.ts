@@ -7,7 +7,7 @@ interface WindowSize {
 
 /**
  * Hook to get the window size.
- * 
+ *
  * @returns The window size object with innerWidth and innerHeight.
  */
 const useWindowSize = (): WindowSize => {

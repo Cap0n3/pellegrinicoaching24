@@ -43,7 +43,9 @@ export default function Headings({
             className={cn(
                 "mb-4 text-center",
                 classProps,
-                slide ? "animate-slidein opacity-0 [--slidein-delay:300ms]" : "",
+                slide
+                    ? "animate-slidein opacity-0 [--slidein-delay:300ms]"
+                    : "",
                 className
             )}
         >

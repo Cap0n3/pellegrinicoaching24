@@ -8,10 +8,12 @@
         "srLogo": "Acme Inc"
     },
     "HomePage": {
-        "title": "Move from inspiration to action",
-        "description": "Michael Pellegrini, certified life coach, helps you unleash your creative potential and transform your life by tapping into your inspiration.",
-        "cta": "Make an appointment",
-        "ariaLabel": "Hero header of the home page",
+        "hero": {
+            "title": "Move from inspiration to action",
+            "description": "Michael Pellegrini, certified life coach, helps you unleash your creative potential and transform your life by tapping into your inspiration.",
+            "cta": "Make an appointment",
+            "ariaLabel": "Hero header of the home page"
+        },
         "features": {
             "cta": "Learn more",
             "feature-one": {

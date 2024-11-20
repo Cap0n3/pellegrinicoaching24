@@ -54,7 +54,6 @@ const config = {
                 },
                 "mp-light-beige": "#FFF9EB",
                 "mp-dark-blue": "#69777A",
-
             },
             borderRadius: {
                 lg: "var(--radius)",
@@ -96,9 +95,9 @@ const config = {
             },
             backgroundImage: {
                 hero: "url('/images/hero_mpcoaching_optimized.webp')",
-                "hero-dark": "url('/images/hero_mpcoaching_optimized_dark.webp')",
-                parallax:
-                    "url('/images/parallax.webp')",
+                "hero-dark":
+                    "url('/images/hero_mpcoaching_optimized_dark.webp')",
+                parallax: "url('/images/parallax.webp')",
             },
             boxShadow: {
                 "inset-background": "inset 0 0 0 1000px hsl(var(--background))", // For autofill input bg color

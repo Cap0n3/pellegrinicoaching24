@@ -17,7 +17,6 @@ import Turnstile, { useTurnstile } from "react-turnstile";
 import { verifyToken } from "@/utils/turnstileVerification";
 import { useTheme } from "next-themes";
 
-
 const EMAIL_API_ENDPOINT = "/api/email";
 
 interface IFormInput {
@@ -58,7 +57,7 @@ export default function ContactForm(): JSX.Element {
         null
     );
     const [isUnsupported, setIsUnsupported] = useState(false);
-    
+
     /**
      * Fully reset the form state
      */
@@ -162,7 +161,7 @@ export default function ContactForm(): JSX.Element {
                     ]}
                     {...register("subject")}
                 />
-                <fieldset className="mb-5 flex flex-col md:flex-row md:items-center md:justify-start gap-3">
+                <fieldset className="mb-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-start">
                     <legend className="mb-3 block text-sm font-medium text-primary">
                         {t("modality")}
                     </legend>

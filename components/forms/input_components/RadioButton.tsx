@@ -21,7 +21,7 @@ const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
                 onChange={onChange}
                 onBlur={onBlur}
                 aria-label={label}
-                className="form-radio w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+                className="form-radio h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800"
             />
             <label
                 htmlFor={id}

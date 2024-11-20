@@ -21,7 +21,6 @@ import React from "react";
 import { useLocale } from "next-intl";
 import { useTheme } from "next-themes";
 
-
 export default function Navbar() {
     // Get the scroll position of the page
     const scrollPosition = React.useRef(0);
@@ -63,7 +62,10 @@ export default function Navbar() {
                 <SheetContent side="left">
                     <SheetHeader>
                         <SheetTitle>
-                            <SiteLogo size={50} logoTheme={theme === "dark" ? "dark" : "light"} />
+                            <SiteLogo
+                                size={50}
+                                logoTheme={theme === "dark" ? "dark" : "light"}
+                            />
                             <span className="sr-only">{t("srLogo")}</span>
                         </SheetTitle>
                         <SheetDescription />{" "}
@@ -121,7 +123,10 @@ export default function Navbar() {
                 role="logo"
             >
                 {/* SITE LOGO */}
-                <SiteLogo size={50} logoTheme={theme === "dark" ? "dark" : "light"} />
+                <SiteLogo
+                    size={50}
+                    logoTheme={theme === "dark" ? "dark" : "light"}
+                />
                 <span className="sr-only">{t("srLogo")}</span>
             </Link>
             <nav className="ml-auto hidden gap-6 lg:flex">
