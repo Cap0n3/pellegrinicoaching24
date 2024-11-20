@@ -48,7 +48,6 @@ export default function AboutSection({
                                 title={title}
                                 type="h2"
                                 className="mb-12 text-start"
-                                slide
                             />
                             {paragraphs.map((paragraph, index) => (
                                 <p

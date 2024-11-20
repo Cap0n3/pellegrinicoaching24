@@ -6,6 +6,20 @@ import Image from "next/image";
 import WaveDivider from "@/components/common/WaveDivider";
 import { cn } from "@/lib/utils";
 
+type SocialProofProps = {
+    title: string;
+    description: string;
+    brandLogos: {
+        src: string;
+        alt: string;
+        width: number;
+        height: number;
+        className: string;
+    }[];
+    contrast?: boolean;
+    wave?: boolean;
+};
+
 type BrandLogoProps = {
     src: string;
     alt: string;
@@ -35,24 +49,6 @@ function BrandLogo({
         </Slide>
     );
 }
-
-/* ============== */
-/* Main component */
-/* ============== */
-
-type SocialProofProps = {
-    title: string;
-    description: string;
-    brandLogos: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-        className: string;
-    }[];
-    contrast?: boolean;
-    wave?: boolean;
-};
 
 /**
  * Social Proof Section
