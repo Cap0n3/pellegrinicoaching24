@@ -11,12 +11,12 @@ type HeadingsProps = {
 };
 
 type TitleProps = {
-    title: string;
     type: string;
     className?: string;
+    children: React.ReactNode;
 };
 
-function Title({ title, type, className }: TitleProps) {
+function Title({ children, type, className }: TitleProps) {
     const chooseClass = (type: string): string => {
         switch (type) {
             case "h1":
@@ -35,7 +35,6 @@ function Title({ title, type, className }: TitleProps) {
                 return "text-3xl md:text-5xl";
         }
     };
-    //const Heading = type || "h1";
     const classProps = chooseClass(type);
 
     return (
@@ -45,7 +44,7 @@ function Title({ title, type, className }: TitleProps) {
             {
                 className: cn("mb-4 text-center", classProps, className),
             },
-            title
+            children
         )
     );
 }
@@ -62,10 +61,14 @@ export default function Headings({
             {
                 slide ? (
                     <Slide>
-                        <Title title={title} type={type} className={className} />
+                        <Title type={type} className={className}>
+                            {title}
+                        </Title>
                     </Slide>
                 ) : (
-                    <Title title={title} type={type} className={className} />
+                    <Title type={type} className={className}>
+                        {title}
+                    </Title>
                 ) 
             }
         </>

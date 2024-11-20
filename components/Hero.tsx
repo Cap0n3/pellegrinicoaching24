@@ -25,7 +25,7 @@ export default function Hero({
         <section
             aria-label={ariaLabel}
             className="relative flex h-screen min-h-[700px] w-full items-center justify-center bg-hero bg-[60%_30%] bg-no-repeat px-10 dark:bg-hero-dark md:justify-start md:bg-[50%_30%] lg:bg-[40%_30%] lg:px-20"
-        >
+        > 
             <div
                 className="flex max-w-[500px] flex-col items-start justify-center md:w-[600px] md:max-w-none lg:w-[800px]"
                 tabIndex={0}

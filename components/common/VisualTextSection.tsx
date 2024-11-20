@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Slide from "@/components/common/Slide";
 import Headings from "@/components/common/Headings";
+import AnimatedHeadings from "@/components/common/AnimatedHeadings";
 import WaveDivider from "@/components/common/WaveDivider";
 import { cn } from "@/lib/utils";
 
@@ -50,10 +51,16 @@ export default function VisualTextSection({
         >
             <Slide>
                 <div tabIndex={0}>
-                    <Headings
+                    {/* <Headings
                         title={title}
                         type="h3"
                         className="mb-6 text-start"
+                    /> */}
+                    <AnimatedHeadings
+                        title={title}
+                        type="h3"
+                        className="mb-6 text-start"
+                        waitTime={1000}
                     />
                     <p className="text-md">{paragraph}</p>
                 </div>
