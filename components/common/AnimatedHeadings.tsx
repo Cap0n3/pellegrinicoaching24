@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { useInView } from "motion/react"
 
 type HeadingsProps = {
     title: string;
@@ -50,7 +51,7 @@ function Title({ children, type, className }: TitleProps) {
     );
 }
 
-export default function Headings({
+export default function AnimatedHeadings({
     title,
     type,
     className,
@@ -58,47 +59,45 @@ export default function Headings({
     delay = 100,
 }: HeadingsProps) {
     const [visibleChars, setVisibleChars] = useState(0);
-
-    // useEffect(() => {
-    //     if (visibleChars < title.length) {
-    //         const timer = setTimeout(() => {
-    //             setVisibleChars((prev: number) => prev + 1);
-    //         }, 100);
-    //         return () => clearTimeout(timer); // Cleanup timeout
-    //     }
-    // }, [visibleChars, title.length]);
+    const ref = useRef(null)
+    const isInView = useInView(ref)
 
     useEffect(() => {
-        const initialDelay = waitTime; // Delay before animation starts in milliseconds
-        const animationDelay = delay; // Delay between each character animation
-    
-        if (visibleChars === 0) {
+        const isInitialDelay = visibleChars === 0;
+
+        if (!isInView) return; // Do nothing if not in view
+
+        let timer: NodeJS.Timeout; // Declare one timer for both delays
+
+        if (isInitialDelay) {
             // Run initial delay only once
-            const initialTimer = setTimeout(() => {
+            timer = setTimeout(() => {
                 setVisibleChars(1); // Start the animation
-            }, initialDelay);
-            return () => clearTimeout(initialTimer);
+            }, waitTime);
         } else if (visibleChars < title.length) {
             // Handle the per-character animation delay
-            const charTimer = setTimeout(() => {
+            timer = setTimeout(() => {
                 setVisibleChars((prev: number) => prev + 1);
-            }, animationDelay);
-            return () => clearTimeout(charTimer);
+            }, delay);
         }
-    }, [visibleChars, title.length, waitTime, delay]);
+
+        return () => clearTimeout(timer);
+    }, [isInView, visibleChars, title.length, waitTime, delay]);
 
     return (
-        <Title type={type} className={className}>
-            {Array.from(title).map((char, index) => (
-                <span
-                    key={index}
-                    className={cn(
-                        index < visibleChars ? "" : "invisible"
-                    )}
-                >
-                    {char}
-                </span>
-            ))}
-        </Title>
+        <div ref={ref}>
+            <Title type={type} className={className}>
+                {Array.from(title).map((char, index) => (
+                    <span
+                        key={index}
+                        className={cn(
+                            index < visibleChars ? "" : "invisible"
+                        )}
+                    >
+                        {char}
+                    </span>
+                ))}
+            </Title>
+        </div>
     );
 }

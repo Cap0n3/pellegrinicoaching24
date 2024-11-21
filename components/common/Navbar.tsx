@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect } from "react";
 import {
     Sheet,
     SheetHeader,
@@ -11,15 +12,13 @@ import {
     SheetFooter,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Target } from "lucide-react";
+import { Menu } from "lucide-react";
 import SiteLogo from "./SiteLogo";
 import { ModeToggle } from "../ModeToggle";
 import { LocaleSwitcher } from "../LocaleSwitcher";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import React from "react";
 import { useLocale } from "next-intl";
-import { useTheme } from "next-themes";
 
 export default function Navbar() {
     // Get the scroll position of the page
@@ -27,7 +26,6 @@ export default function Navbar() {
     const [isScrolling, setIsScrolling] = React.useState(false);
     const t = useTranslations("Navigation");
     const locale = useLocale();
-    const { theme } = useTheme();
 
     // Handle the scroll event
     const handleScroll = () => {
@@ -36,7 +34,7 @@ export default function Navbar() {
     };
 
     // Add the scroll event listener
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -64,7 +62,6 @@ export default function Navbar() {
                         <SheetTitle>
                             <SiteLogo
                                 size={50}
-                                logoTheme={theme === "dark" ? "dark" : "light"}
                             />
                             <span className="sr-only">{t("srLogo")}</span>
                         </SheetTitle>
@@ -125,7 +122,6 @@ export default function Navbar() {
                 {/* SITE LOGO */}
                 <SiteLogo
                     size={50}
-                    logoTheme={theme === "dark" ? "dark" : "light"}
                 />
                 <span className="sr-only">{t("srLogo")}</span>
             </Link>

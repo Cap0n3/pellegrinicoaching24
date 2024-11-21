@@ -1,6 +1,6 @@
 import React from "react";
 import Slide from "@/components/common/Slide";
-import Headings from "@/components/common/Headings";
+import AnimatedHeadings from "./common/AnimatedHeadings";
 import WaveDivider from "@/components/common/WaveDivider";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
@@ -34,7 +34,7 @@ export default function CTA({
         >
             <Slide>
                 <div tabIndex={0} className="flex flex-col gap-4">
-                    <Headings title={title} type="h2" className="text-start" />
+                    <AnimatedHeadings title={title} type="h2" className="text-start" delay={50} />
                     <p className="text-md">{paragraph}</p>
                     <Link href="/contact" prefetch={false}>
                         <Button

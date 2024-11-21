@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@/navigation";
-import { Target } from "lucide-react";
+import SiteLogo from "@/components/common/SiteLogo";
 import {
     FaXTwitter,
     FaInstagram,
@@ -18,7 +18,9 @@ export default function Footer() {
             <WaveDivider position="top" />
             <div className="flex flex-col items-center justify-center">
                 <Link href="/">
-                    <Target className="h-6 w-6" />
+                    <SiteLogo
+                        size={50}
+                    />
                 </Link>
 
                 <ul className="mb-10 flex flex-col items-center justify-center gap-7 border-b-[.5px] border-gray-200 py-16 text-lg transition-all duration-500 md:flex-row md:gap-12">

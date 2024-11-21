@@ -1,10 +1,7 @@
 "use client";
 
-import React, { useRef, useEffect, useState, cloneElement } from "react";
-import useWindowSize from "@/hooks/useWindowSize";
-import useScroll from "@/hooks/useScroll";
-import { debounce } from "@/utils/debounce";
-import { cn } from "@/lib/utils";
+import React from "react";
+import { motion } from "framer-motion";
 
 interface SlideProps {
     children: React.ReactElement<{ className?: string }>;
@@ -14,7 +11,7 @@ interface SlideProps {
 }
 
 /**
- * Slide component that animates the child element when it comes into view. It uses the `animate-slidein` CSS class (Tailwind CSS) to animate the child element.
+ * Slide component that animates the child element when it comes into view using Framer Motion.
  *
  * @param children - The child element to animate.
  * @param delay - The delay in milliseconds before the animation starts. Default is 0.
@@ -39,74 +36,36 @@ const Slide: React.FC<SlideProps> = ({
     className,
     ...props
 }) => {
-    // Default delay is 300ms
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [containerPosition, setContainerPosition] = useState<number>(0);
-    const [isInView, setIsInView] = useState(false);
-    const [show, setShow] = useState(false);
-    const windowSize = useWindowSize();
-    const scrollPosition = useScroll();
+    // const containerRef = useRef<HTMLDivElement>(null);
+    // const isInView = useInView(containerRef, { once: true });
 
-    /**
-     * Function to get the offset top of a relative positionned element.
-     * Note: Not possible to use `element.offsetTop` because it returns the offset top relative to the offsetParent.
-     *
-     * @param element - The element to get the offset top.
-     * @returns The offset top of the element.
-     */
-    const getOffsetTop = (element: HTMLElement | null): number => {
-        let offsetTop = 0;
-        while (element) {
-            offsetTop += element.offsetTop;
-            element = element.offsetParent as HTMLElement | null;
-        }
-        return offsetTop;
+    const animationVariants = {
+        hidden: {
+            opacity: 0,
+            y: -20, // Start slightly above
+        },
+        visible: {
+            opacity: 1,
+            y: 0, // End at the final position
+            transition: {
+                duration: 1.2, // Duration of the animation
+                ease: "easeOut",
+                delay: delay / 1000, // Convert milliseconds to seconds for Framer Motion
+            },
+        },
     };
-
-    // Function to update the container position and view status
-    const updatePosition = () => {
-        if (containerRef.current) {
-            const containerPosition = getOffsetTop(containerRef.current);
-
-            const bottomScroll = scrollPosition + windowSize.innerHeight;
-            if (containerPosition < bottomScroll) {
-                setIsInView(true);
-            }
-        }
-    };
-
-    // Avoid calling the function too many times when scrolling or resizing
-    const debounceUpdatePosition = debounce(updatePosition, 10);
-
-    // Update position on mount and whenever window size or scroll position changes
-    useEffect(() => {
-        debounceUpdatePosition();
-    }, [scrollPosition, windowSize, debounceUpdatePosition]);
-
-    // Add delay to the animation (it's a hacky way to add delay it for now)
-    useEffect(() => {
-        if (isInView) {
-            // Delay the animation
-            setTimeout(() => {
-                setShow(true);
-            }, delay);
-        }
-    }, [isInView, delay]);
-
-    // DELAY VARIABLE NOT WORKING PROPERLY ... FIX IT
 
     return (
-        <div
-            ref={containerRef}
-            className={cn(
-                show && "animate-slidein [--slidein-delay:300ms]",
-                "opacity-0",
-                className
-            )}
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={animationVariants}
+            viewport={{ once: true }}
             {...props}
+            className={className}
         >
             {children}
-        </div>
+        </motion.div>
     );
 };
 

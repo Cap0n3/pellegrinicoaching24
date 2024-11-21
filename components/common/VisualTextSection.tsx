@@ -60,7 +60,8 @@ export default function VisualTextSection({
                         title={title}
                         type="h3"
                         className="mb-6 text-start"
-                        waitTime={1000}
+                        waitTime={500}
+                        delay={50}
                     />
                     <p className="text-md">{paragraph}</p>
                 </div>
