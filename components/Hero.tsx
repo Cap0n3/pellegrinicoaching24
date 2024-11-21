@@ -1,9 +1,11 @@
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import Slide from "@/components/common/Slide";
 import Headings from "@/components/common/Headings";
 import WaveDivider from "./common/WaveDivider";
 import { Link } from "@/navigation";
+import AnimatedButton from "@/components/common/AnimatedButton";
+import AnimatedHeadings from "@/components/common/AnimatedHeadings";
 
 type HeroProps = {
     title: string;
@@ -30,12 +32,13 @@ export default function Hero({
                 className="flex max-w-[500px] flex-col items-start justify-center md:w-[600px] md:max-w-none lg:w-[800px]"
                 tabIndex={0}
             >
-                <Headings
+                {/* <Headings
                     title={title}
                     type="h1"
                     className="text-start uppercase"
                     slide
-                />
+                /> */}
+                <AnimatedHeadings title={title} type="h1" className="text-start uppercase" delay={50} />
                 <Headings
                     title={description}
                     type="h6"
@@ -44,12 +47,13 @@ export default function Hero({
                 />
                 <Slide delay={300}>
                     <Link href="/contact" prefetch={false}>
-                        <Button
+                        {/* <Button
                             aria-label={cta}
                             className="mt-6 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90"
                         >
                             {cta}
-                        </Button>
+                        </Button> */}
+                        <AnimatedButton text={cta} delay={1000} className="mt-6" />
                     </Link>
                 </Slide>
             </div>

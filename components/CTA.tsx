@@ -1,6 +1,7 @@
 import React from "react";
 import Slide from "@/components/common/Slide";
 import AnimatedHeadings from "./common/AnimatedHeadings";
+import AnimatedButton from "@/components/common/AnimatedButton";
 import WaveDivider from "@/components/common/WaveDivider";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
@@ -37,12 +38,13 @@ export default function CTA({
                     <AnimatedHeadings title={title} type="h2" className="text-start" delay={50} />
                     <p className="text-md">{paragraph}</p>
                     <Link href="/contact" prefetch={false}>
-                        <Button
+                        {/* <Button
                             aria-label="cta"
                             className="mt-6 w-44 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90"
                         >
                             {cta}
-                        </Button>
+                        </Button> */}
+                        <AnimatedButton text={cta} delay={1000} className="mt-6" />
                     </Link>
                 </div>
             </Slide>

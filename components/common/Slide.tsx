@@ -36,9 +36,6 @@ const Slide: React.FC<SlideProps> = ({
     className,
     ...props
 }) => {
-    // const containerRef = useRef<HTMLDivElement>(null);
-    // const isInView = useInView(containerRef, { once: true });
-
     const animationVariants = {
         hidden: {
             opacity: 0,
@@ -48,7 +45,7 @@ const Slide: React.FC<SlideProps> = ({
             opacity: 1,
             y: 0, // End at the final position
             transition: {
-                duration: 1.2, // Duration of the animation
+                duration: 1.3, // Duration of the animation
                 ease: "easeOut",
                 delay: delay / 1000, // Convert milliseconds to seconds for Framer Motion
             },
