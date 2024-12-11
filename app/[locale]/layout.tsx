@@ -7,7 +7,9 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import ScrollTop from "@/components/common/ScrollToTop";
 import { NextIntlClientProvider } from "next-intl";
+import { PHProvider } from "@/contexts/PosthogProvider";
 import { getMessages } from "next-intl/server";
+import dynamic from 'next/dynamic'
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -36,6 +38,10 @@ export const metadata: Metadata = {
     },
 };
 
+const PostHogPageView = dynamic(() => import('../PostHogPageView'), {
+    ssr: false,
+});
+
 export default async function LocaleLayout({
     children,
     params: { locale },
@@ -57,10 +63,13 @@ export default async function LocaleLayout({
                         disableTransitionOnChange
                     >
                         <Providers>
-                            <Navbar />
-                            {children}
-                            <Footer />
-                            <ScrollTop />
+                            <PHProvider>
+                                <PostHogPageView /> 
+                                <Navbar />
+                                {children}
+                                <Footer />
+                                <ScrollTop />
+                            </PHProvider>
                         </Providers>
                     </ThemeProvider>
                 </NextIntlClientProvider>
