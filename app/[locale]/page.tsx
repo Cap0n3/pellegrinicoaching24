@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import AboutSection from "@/components/AboutSection";
 import SocialProof from "@/components/SocialProof";
 import CTA from "@/components/CTA";
+import NewsletterSection from "@/components/NewsletterSection";
 //import Features from "@/components/Features";
 //import Pricings from "@/components/Pricings";
 //import { CircleCheckBig, ThumbsUp, Luggage } from "lucide-react";
@@ -89,6 +90,14 @@ export default function Home() {
                 paragraph={t("showcase-four.description")}
                 inverted
                 contrast
+            />
+            <NewsletterSection
+                id="newsletter"
+                title={t("newsletter.title")}
+                paragraph={t("newsletter.description")}
+                cta={t("newsletter.cta")}
+                placeholder={t("newsletter.placeholder")}
+                wave
             />
             <ParallaxSection img="/images/parallax.webp" />
             <AboutSection

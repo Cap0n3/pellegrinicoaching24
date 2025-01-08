@@ -60,7 +60,7 @@ export default function Hero({
                         <AnimatedButton
                             text={cta}
                             delay={1000}
-                            className="mt-6"
+                            buttonClassName="mt-6"
                         />
                     </Link>
                 </Slide>

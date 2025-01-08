@@ -49,6 +49,12 @@
             "title": "A holistic vision",
             "description": "Based on the 5 forms of intelligence (cognitive, emotional, somatic, intuitive and collective), my approach also incorporates a global vision, the use of body language and the latest advances in neuroscience. These techniques enable me to reveal your deepest needs and guide you towards lasting solutions."
         },
+        "newsletter": {
+            "title": "Subscribe to my newsletter",
+            "description": "Subscribe to my newsletter to receive the latest news and exclusive offers.",
+            "cta": "Subscribe",
+            "placeholder": "Enter your email address"
+        },
         "testimonials": {
             "testimonial-one": {
                 "image": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU",

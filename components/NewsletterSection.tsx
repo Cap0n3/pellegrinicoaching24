@@ -4,26 +4,29 @@ import AnimatedHeadings from "./common/AnimatedHeadings";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import WaveDivider from "@/components/common/WaveDivider";
 import { Button } from "@/components/ui/button";
+import NewsletterInput from "@/components/common/NewsletterInput";
 import { Link } from "@/navigation";
 import { cn } from "@/lib/utils";
 
-interface CTAProps {
+type NewsletterProps = {
     id: string;
     title: string;
     paragraph: string;
     cta: string;
+    placeholder: string;
     contrast?: boolean;
     wave?: boolean;
-}
+};
 
-export default function CTA({
+export default function Newsletter({
     id,
     title,
     paragraph,
     cta,
+    placeholder,
     contrast = false,
     wave = false,
-}: CTAProps) {
+}: NewsletterProps) {
     const textBlock = (
         <div
             className={cn(
@@ -34,7 +37,10 @@ export default function CTA({
             )}
         >
             <Slide>
-                <div tabIndex={0} className="flex flex-col gap-4">
+                <div
+                    tabIndex={0}
+                    className="flex flex-col items-center justify-center gap-4"
+                >
                     <AnimatedHeadings
                         title={title}
                         type="h2"
@@ -42,19 +48,7 @@ export default function CTA({
                         delay={50}
                     />
                     <p className="text-md">{paragraph}</p>
-                    <Link href="/contact" prefetch={false}>
-                        {/* <Button
-                            aria-label="cta"
-                            className="mt-6 w-44 bg-mp-dark-blue hover:bg-mp-dark-blue/90 dark:bg-gray-800 dark:text-white dark:hover:bg-mp-dark-blue/90"
-                        >
-                            {cta}
-                        </Button> */}
-                        <AnimatedButton
-                            text={cta}
-                            delay={1000}
-                            buttonClassName="mt-6"
-                        />
-                    </Link>
+                    <NewsletterInput cta={cta} placeholder={placeholder} />
                 </div>
             </Slide>
         </div>
@@ -72,10 +66,9 @@ export default function CTA({
             )}
         >
             {wave && <WaveDivider position="top" />}
-            <div className="flex w-full max-w-[2000px] flex-col items-center justify-center lg:flex-row">
+            <div className="flex w-full max-w-[2000px] flex-col items-center justify-center py-20 lg:flex-row">
                 {textBlock}
             </div>
-            {wave && <WaveDivider position="bottom" />}
         </section>
     );
 }

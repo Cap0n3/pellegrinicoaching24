@@ -7,10 +7,11 @@ type RadioButtonProps = {
     value: string;
     label: string;
     id: string;
+    className?: string;
 } & UseFormRegisterReturn;
 
 const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
-    ({ onChange, onBlur, name, value, label, id }, ref) => (
+    ({ onChange, onBlur, name, value, label, id, className }, ref) => (
         <div className="flex items-center space-x-2">
             <input
                 ref={ref}
@@ -21,7 +22,10 @@ const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
                 onChange={onChange}
                 onBlur={onBlur}
                 aria-label={label}
-                className="form-radio h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800"
+                className={cn(
+                    "form-radio h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800",
+                    className
+                )}
             />
             <label
                 htmlFor={id}

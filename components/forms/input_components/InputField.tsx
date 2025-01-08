@@ -10,7 +10,7 @@ type IFormValues = {
 type InputFieldProps = {
     id: string;
     type: "text" | "email" | "tel";
-    label: string;
+    label?: string;
     placeholder: string;
     errors: { [key: string]: any };
     className?: string;
@@ -31,7 +31,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
         } = props;
 
         return (
-            <div className="mb-5 w-full">
+            <div className="w-full">
                 {label && (
                     <label
                         htmlFor={id}
@@ -48,7 +48,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
                     onChange={onChange}
                     onBlur={onBlur}
                     className={cn(
-                        "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+                        "mb-5 h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
                         className
                     )}
                     placeholder={placeholder}

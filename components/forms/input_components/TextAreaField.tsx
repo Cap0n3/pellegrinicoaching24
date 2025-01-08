@@ -31,7 +31,7 @@ const TextAreaField = React.forwardRef<HTMLTextAreaElement, TextAreaFieldProps>(
         } = props;
 
         return (
-            <div className="mb-5 w-full">
+            <div className="w-full">
                 {label && (
                     <label
                         htmlFor={id}
@@ -47,7 +47,7 @@ const TextAreaField = React.forwardRef<HTMLTextAreaElement, TextAreaFieldProps>(
                     onChange={onChange}
                     onBlur={onBlur}
                     className={cn(
-                        "flex min-h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+                        "mb-5 flex min-h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
                         className
                     )}
                     placeholder={placeholder}
