@@ -25,7 +25,7 @@ export default function Home() {
                 title={t("hero.title")}
                 description={t("hero.description")}
                 cta={t("hero.cta")}
-                ariaLabel={t("hero.aria-label")}
+                ariaLabel={t("hero.ariaLabel")}
             />
             <DefaultFeatures
                 featuresData={[

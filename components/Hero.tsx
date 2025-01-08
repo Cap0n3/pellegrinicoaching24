@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Slide from "@/components/common/Slide";
 import Headings from "@/components/common/Headings";
 import WaveDivider from "./common/WaveDivider";
@@ -27,7 +26,7 @@ export default function Hero({
         <section
             aria-label={ariaLabel}
             className="relative flex h-screen min-h-[700px] w-full items-center justify-center bg-hero bg-[60%_30%] bg-no-repeat px-10 dark:bg-hero-dark md:justify-start md:bg-[50%_30%] lg:bg-[40%_30%] lg:px-20"
-        > 
+        >
             <div
                 className="flex max-w-[500px] flex-col items-start justify-center md:w-[600px] md:max-w-none lg:w-[800px]"
                 tabIndex={0}
@@ -38,7 +37,12 @@ export default function Hero({
                     className="text-start uppercase"
                     slide
                 /> */}
-                <AnimatedHeadings title={title} type="h1" className="text-start uppercase" delay={50} />
+                <AnimatedHeadings
+                    title={title}
+                    type="h1"
+                    className="text-start uppercase"
+                    delay={50}
+                />
                 <Headings
                     title={description}
                     type="h6"
@@ -53,7 +57,11 @@ export default function Hero({
                         >
                             {cta}
                         </Button> */}
-                        <AnimatedButton text={cta} delay={1000} className="mt-6" />
+                        <AnimatedButton
+                            text={cta}
+                            delay={1000}
+                            className="mt-6"
+                        />
                     </Link>
                 </Slide>
             </div>
