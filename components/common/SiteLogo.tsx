@@ -16,7 +16,7 @@ export default function SiteLogo({ size = 50 }: Props) {
         if (!theme) return;
         if (theme === "light") {
             setLogoImage("/images/logos/logo_black.webp");
-        } else {
+        } else if (theme === "dark") {
             setLogoImage("/images/logos/logo_white.webp");
         }
     }, [theme]);
