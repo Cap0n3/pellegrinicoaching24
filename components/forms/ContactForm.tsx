@@ -38,8 +38,8 @@ export default function ContactForm(): JSX.Element {
         reset,
     } = useForm<IFormInput>({
         defaultValues: {
-            subject: "General",
-            option: "option1",
+            subject: "Question",
+            option: "Pas de préférence",
         },
     });
     const t = useTranslations("Forms.contact");
@@ -168,19 +168,19 @@ export default function ContactForm(): JSX.Element {
                     <RadioButton
                         id="contact_option1"
                         label={t("option1")}
-                        value="aucune"
+                        value="Pas de préférence"
                         {...register("option")}
                     />
                     <RadioButton
                         id="contact_option2"
                         label={t("option2")}
-                        value="option2"
+                        value="vidéo conférence"
                         {...register("option")}
                     />
                     <RadioButton
                         id="contact_option3"
                         label={t("option3")}
-                        value="option3"
+                        value="En personne"
                         {...register("option")}
                     />
                 </fieldset>
