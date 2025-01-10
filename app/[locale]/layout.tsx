@@ -24,17 +24,28 @@ export const metadata: Metadata = {
         "Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
     openGraph: {
         type: "website",
+        title: "Michael Pellegrini Coaching",
+        description: "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
         locale: "fr_FR",
         url: "https://example.com",
         images: [
             {
-                url: "https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
+                url: "/images/mpcoaching_og_image.webp",
+                alt: "Michael Pellegrini Coaching",
             },
         ],
         siteName: "MP Coaching",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Michael Pellegrini Coaching",
+        description: "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+        images: [
+            {
+                url: "/images/mpcoaching_og_image.webp",
+                alt: "Michael Pellegrini Coaching",
+            },
+        ]
     },
 };
 
