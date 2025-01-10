@@ -201,7 +201,7 @@
             "message_pattern": "Follwing characters are not allowed: <, >, |, '{, '}, [, ]",
             "submit": "Send message",
             "ariaLabel": "Contact form",
-            "success": "Your message has been sent successfully.",
+            "success": "Your message has been sent successfully ! I'll get back to you as soon as possible.",
             "error": "An error occurred while sending your message. Please try again later or contact the site administrator if the problem persists.",
             "captcha": "Please check the captcha to continue.",
             "captcha_error": "Your captcha validation token couldn't be verified by Cloudflare. Please try again later or contact the site administrator if the problem persists.",
