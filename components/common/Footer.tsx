@@ -94,7 +94,7 @@ export default function Footer() {
                         <FaFacebookF className="h-7 w-7" />
                     </a>
                     <a
-                        href="https://ch.linkedin.com/in/michael-pellegrini-222180335"
+                        href="https://www.linkedin.com/in/michael-pellegrini-29ab42264"
                         className="block transition-all duration-500 hover:text-indigo-600"
                         aria-label="Linkedin"
                         tabIndex={0}
