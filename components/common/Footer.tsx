@@ -6,6 +6,7 @@ import {
     FaInstagram,
     FaFacebookF,
     FaYoutube,
+    FaLinkedin
 } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 import WaveDivider from "./WaveDivider";
@@ -62,7 +63,7 @@ export default function Footer() {
                     </li>
                 </ul>
                 <div className="mb-14 flex items-center justify-center space-x-10">
-                    <a
+                    {/* <a
                         href="https://x.com/"
                         className="block transition-all duration-500 hover:text-indigo-600"
                         aria-label="X-Twitter"
@@ -81,9 +82,9 @@ export default function Footer() {
                         rel="noopener noreferrer"
                     >
                         <FaInstagram className="h-7 w-7" />
-                    </a>
+                    </a> */}
                     <a
-                        href="https://www.facebook.com/"
+                        href="https://www.facebook.com/share/15T446VKWG/?mibextid=wwXIfr"
                         className="block transition-all duration-500 hover:text-indigo-600"
                         aria-label="Facebook"
                         tabIndex={0}
@@ -93,6 +94,16 @@ export default function Footer() {
                         <FaFacebookF className="h-7 w-7" />
                     </a>
                     <a
+                        href="https://ch.linkedin.com/in/michael-pellegrini-222180335"
+                        className="block transition-all duration-500 hover:text-indigo-600"
+                        aria-label="Linkedin"
+                        tabIndex={0}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaLinkedin className="h-8 w-8" />
+                    </a>
+                    {/* <a
                         href="https://www.youtube.com/"
                         className="block transition-all duration-500 hover:text-indigo-600"
                         aria-label="Youtube"
@@ -101,7 +112,7 @@ export default function Footer() {
                         rel="noopener noreferrer"
                     >
                         <FaYoutube className="h-7 w-7" />
-                    </a>
+                    </a> */}
                 </div>
                 <span
                     className="block px-8 text-center text-sm"
