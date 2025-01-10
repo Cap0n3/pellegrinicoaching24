@@ -86,7 +86,7 @@ export default function NewsletterInput({
                     id="newsletter_email"
                     type="email"
                     placeholder={placeholder}
-                    className="mb-0 w-full md:mb-5"
+                    className="w-full"
                     {...register("email", {
                         required: t("required"),
                         minLength: { value: 2, message: t("minLength") },

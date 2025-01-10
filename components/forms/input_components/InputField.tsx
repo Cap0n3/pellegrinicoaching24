@@ -31,7 +31,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
         } = props;
 
         return (
-            <div className="w-full">
+            <div className="w-full mb-5">
                 {label && (
                     <label
                         htmlFor={id}
@@ -48,7 +48,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
                     onChange={onChange}
                     onBlur={onBlur}
                     className={cn(
-                        "mb-5 h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+                        "h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
                         className
                     )}
                     placeholder={placeholder}
@@ -58,7 +58,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
                 {errors[name] && (
                     <span
                         role="alert"
-                        className="text-sm text-red-500 dark:text-red-400"
+                        className="block mt-2 text-sm text-red-500 dark:text-red-400"
                     >
                         {errors[name].message}
                     </span>
