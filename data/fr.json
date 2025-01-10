@@ -62,46 +62,46 @@
         },
         "testimonials": {
             "testimonial-one": {
-                "image": "https://fastly.picsum.photos/id/91/3504/2336.jpg?hmac=tK6z7RReLgUlCuf4flDKeg57o6CUAbgklgLsGL0UowU",
-                "quote": "Ce service a changé ma vie, je ne pourrais plus m'en passer !",
-                "author": "Jean Dupont",
-                "role": "Directeur",
+                "image": "/images/testimonials/Mathilde.webp",
+                "quote": "Avec une palette d'outils agiles à son arc, Michael nous accompagne avec sensibilité et bienveillance pour avancer sur nos chemins. Son professionnalisme et sa douceur nous mettent très vite à l'aise et nous permettent d'atteindre des objectifs avec une étonnante efficacité.",
+                "author": "Mathilde B.R",
+                "role": "Cliente",
                 "rating": "5.0"
             },
             "testimonial-two": {
-                "image": "https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg",
-                "quote": "Un service de qualité, je recommande vivement ! Franchement, c'est top !",
-                "author": "Marie Martin",
-                "role": "Chef de projet",
+                "image": "/images/testimonials/Flor.webp",
+                "quote": "Doté de patience et de bienveillance, il m'a accompagné dans ma recherche d'équilibre  entre vie professionnelle et vie privée avec des outils de réflexion pertinents, dans un espace sécurisé et sans jugement.",
+                "author": "Flor R.",
+                "role": "Cliente",
                 "rating": "5.0"
             },
             "testimonial-three": {
-                "image": "https://fastly.picsum.photos/id/177/2515/1830.jpg?hmac=G8-2Q3-YPB2TreOK-4ofcmS-z5F6chIA0GHYAe5yzDY",
-                "quote": "Exceptionnel, je suis bluffé par la qualité de ce service ! J'ai clairement fait le bon choix !",
-                "author": "Pierre Durand",
-                "role": "Développeur",
+                "image": "/images/testimonials/M_H.webp",
+                "quote": "Le coaching de Michael m'a été d'une grande utilité. Son sens de l'écoute et ses stratégies m'ont guidé pour trouver mes solutions et le chemin qui convient le mieux pour avancer dans mes projets.",
+                "author": "M.H",
+                "role": "Client",
                 "rating": "5.0"
             },
             "testimonial-four": {
-                "image": "https://fastly.picsum.photos/id/64/4326/2884.jpg?hmac=9_SzX666YRpR_fOyYStXpfSiJ_edO3ghlSRnH2w09Kg",
-                "quote": "Pas mal, je dois dire que je suis agréablement surpris par ce service ! Un petit bémol cependant...",
-                "author": "Sophie Dufour",
-                "role": "Designer",
-                "rating": "4.0"
+                "image": "/images/testimonials/Sophie.webp",
+                "quote": "Michael sait poser un cadre sûr et bienveillant durant les séances. Je le sens réceptif à toute information, partagée consciemment ou inconsciemment. Michael n'indique pas une direction, il catalyse celle que l'on dessine soi-même.",
+                "author": "Sophie",
+                "role": "Cliente",
+                "rating": "5.0"
             },
             "testimonial-five": {
-                "image": "",
-                "quote": "Wow, je suis impressionné par la qualité des prestations ! Rien à redire, c'est parfait !",
-                "author": "Lucie Lefevre",
-                "role": "Graphiste",
+                "image": "/images/testimonials/E_W.webp",
+                "quote": "Michael est un coach bienveillant, attentif et à l'écoute. A travers ses différents outils, il m'a permise de sortir du cadre et d'oser me mettre au piano à l'âge de 31 ans. Merci à lui pour son professionnalisme.",
+                "author": "E.W",
+                "role": "Cliente",
                 "rating": "5.0"
             },
             "testimonial-six": {
-                "image": "https://fastly.picsum.photos/id/399/2048/1365.jpg?hmac=Tm7jwbWj0i70u952g5yC0da-gxScdY2mQ6gjKrP8Haw",
-                "quote": "Un service de qualité, je recommande sans hésiter !",
-                "author": "Marie Martin",
-                "role": "Chef de projet",
-                "rating": "3.5"
+                "image": "/images/testimonials/Tamara.webp",
+                "quote": "Depuis que je suis enfant je me dis « un jour j’écrirais un livre ». Ce jour s’est finalement présenté mais je ne savais pas par quoi commencer. Par des exercices de jeux de rôle et de création, tous mes blocages ont sautés et mon livre a été édité en 2022 !",
+                "author": "Tamara P.",
+                "role": "Cliente",
+                "rating": "5.0"
             }
         },
         "about-section": {

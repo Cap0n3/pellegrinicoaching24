@@ -202,7 +202,7 @@ export default function Home() {
             <FAQSection
                 id="faq"
                 title={t("faq.title")}
-                imageLink="/images/question.webp"
+                imageLink="/images/question_marks.webp"
                 faqData={[
                     {
                         question: t("faq.questions.question-one.question"),
