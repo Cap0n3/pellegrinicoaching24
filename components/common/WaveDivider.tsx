@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 type Props = {
     position: "top" | "bottom";
@@ -33,7 +34,11 @@ export default function WaveDivider({ position }: Props) {
 
     return (
         <div
-            className={`absolute left-0 w-full overflow-hidden ${position === "bottom" ? "bottom-0" : "top-0"}`}
+            // Place at -1px to hide a small gap between the waves on some browser/mobile simulations
+            className={cn(
+                "absolute left-0 w-full overflow-hidden",
+                position === "bottom" ? "bottom-[-1px]" : "top-[-1px]"
+            )}
         >
             {position === "bottom" ? bottomWave : topWave}
         </div>
