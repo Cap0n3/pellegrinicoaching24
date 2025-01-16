@@ -91,14 +91,22 @@ export default function Home() {
                 inverted
                 contrast
             />
-            {/* <NewsletterSection
+            <NewsletterSection
                 id="newsletter"
                 title={t("newsletter.title")}
                 paragraph={t("newsletter.description")}
                 cta={t("newsletter.cta")}
+                success={{
+                    title: t("newsletter.success-title"),
+                    message: t("newsletter.success-message"),
+                }}
+                error={{
+                    title: t("newsletter.error-title"),
+                    message: t("newsletter.error-message"),
+                }}
                 placeholder={t("newsletter.placeholder")}
                 wave
-            /> */}
+            />
             <ParallaxSection img="/images/parallax.webp" />
             <AboutSection
                 title={t("about-section.title")}

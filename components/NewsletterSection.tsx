@@ -16,6 +16,14 @@ type NewsletterProps = {
     placeholder: string;
     contrast?: boolean;
     wave?: boolean;
+    success: {
+        title: string;
+        message: string;
+    };
+    error: {
+        title: string;
+        message: string;
+    };
 };
 
 export default function Newsletter({
@@ -24,6 +32,8 @@ export default function Newsletter({
     paragraph,
     cta,
     placeholder,
+    success,
+    error,
     contrast = false,
     wave = false,
 }: NewsletterProps) {
@@ -48,7 +58,12 @@ export default function Newsletter({
                         delay={50}
                     />
                     <p className="text-md">{paragraph}</p>
-                    <NewsletterInput cta={cta} placeholder={placeholder} />
+                    <NewsletterInput 
+                        cta={cta} 
+                        placeholder={placeholder} 
+                        success={success}
+                        error={error}
+                    />
                 </div>
             </Slide>
         </div>

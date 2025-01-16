@@ -58,7 +58,11 @@
             "title": "Restez informé",
             "description": "Inscrivez-vous à ma newsletter pour recevoir les dernières actualités et offres exclusives.",
             "cta": "S'inscrire",
-            "placeholder": "Votre adresse email"
+            "placeholder": "Votre adresse email",
+            "success-title": "Merci !",
+            "success-message": "Vous êtes maintenant inscrit à la newsletter.",
+            "error-title": "Oups !",
+            "error-message": "Une erreur est survenue lors de l'inscription à la newsletter. Veuillez réessayer plus tard."
         },
         "testimonials": {
             "testimonial-one": {

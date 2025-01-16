@@ -53,7 +53,11 @@
             "title": "Subscribe to my newsletter",
             "description": "Subscribe to my newsletter to receive the latest news and exclusive offers.",
             "cta": "Subscribe",
-            "placeholder": "Enter your email address"
+            "placeholder": "Enter your email address",
+            "success-title": "Thank you !",
+            "success-message": "You have successfully subscribed to my newsletter.",
+            "error-title": "Oops !",
+            "error-message": "An error occurred while subscribing to the newsletter. Please try again later."
         },
         "testimonials": {
             "testimonial-one": {

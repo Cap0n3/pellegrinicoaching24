@@ -1,18 +1,30 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useRef } from "react";
 import { useForm, SubmitHandler, set } from "react-hook-form";
 import InputField from "@/components/forms/input_components/InputField";
 import { useTranslations } from "next-intl";
 import { FORM_REGEX } from "@/components/forms/formRegex";
 import AnimatedButton from "@/components/common/AnimatedButton";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { FaRegThumbsUp } from "react-icons/fa";
+import { MdError } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NEWSLETTER_API_ENDPOINT = "/api/newsletter";
 
 type NewsletterInputProps = {
     placeholder: string;
     cta: string;
+    success: {
+        title: string;
+        message: string;
+    }
+    error: {
+        title: string;
+        message: string;
+    }
 };
 
 interface IFormInput {
@@ -22,6 +34,8 @@ interface IFormInput {
 export default function NewsletterInput({
     cta,
     placeholder,
+    success,
+    error,
 }: NewsletterInputProps) {
     const {
         register,
@@ -45,6 +59,19 @@ export default function NewsletterInput({
     }, []);
 
     /**
+     * Wait 3 sec and reset submit status
+     */
+    useEffect(() => {
+        if (submitStatus !== "idle") {
+            const timer = setTimeout(() => {
+                handleReset();
+            }, 5000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [submitStatus]);
+
+    /**
      * Form submission handler from react-hook-form
      */
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
@@ -63,7 +90,10 @@ export default function NewsletterInput({
             });
 
             const result = await response.json();
-            console.log(result);
+            
+            if (response.status !== 200) {
+                throw new Error(result.message);
+            }
 
             setSubmitStatus("success");
             setIsSubmitting(false);
@@ -106,6 +136,44 @@ export default function NewsletterInput({
                     buttonClassName="w-full md:w-auto"
                 />
             </form>
+            <AnimatePresence>
+                {
+                    submitStatus === "success" && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: .6 }}
+                        >
+                            <Alert>
+                                <FaRegThumbsUp className="h-4 w-4" />
+                                <AlertTitle>{success.title}</AlertTitle>
+                                <AlertDescription>
+                                    {success.message}
+                                </AlertDescription>
+                            </Alert>
+                        </motion.div>
+                    )
+                }
+                {
+                    submitStatus === "error" && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: .6 }}
+                        >
+                            <Alert variant="destructive">
+                                <MdError className="h-4 w-4" />
+                                <AlertTitle>{error.title}</AlertTitle>
+                                <AlertDescription>
+                                    {error.message}
+                                </AlertDescription>
+                            </Alert>
+                        </motion.div>
+                    )
+                }
+            </AnimatePresence>
         </div>
     );
 }
