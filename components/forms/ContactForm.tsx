@@ -109,15 +109,8 @@ export default function ContactForm(): JSX.Element {
                 body: JSON.stringify(data),
             });
 
-            if (!response.ok) {
-                () => turnstile.reset();
-                setIsSubmitting(false);
-                setSubmitStatus("error");
-                console.error(
-                    "An error occured while submitting the form:",
-                    response
-                );
-                return;
+            if (response.status !== 200) {
+                throw new Error(response.statusText);
             }
 
             const result = await response.json();
@@ -128,6 +121,7 @@ export default function ContactForm(): JSX.Element {
             reset(); // Reset the form fields
         } catch (error) {
             console.error("An error occured while submitting the form:", error);
+            () => turnstile.reset();
             setIsSubmitting(false);
             setSubmitStatus("error");
         }

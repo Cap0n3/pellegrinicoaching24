@@ -2,13 +2,19 @@
 
 const MOCK_SERVER_URL = "http://localhost:1080"; // Used for testing (mockserver, replace with actual server url to inspect requests)
 const EMAIL_JS_URL = "https://api.emailjs.com/api/v1.0/email/send";
-const TEST = false; // Set to true to simlate email sending and return any status code
+
+const TEST = {
+    active: false, // Set to true to test fake response
+    status: 200, // Set custom status code
+}
 
 export async function POST(request: Request) {
-    if (TEST) {
+    if (TEST.active) {
         await new Promise((resolve) => setTimeout(resolve, 3000));
-        return new Response(JSON.stringify({ message: "Email sent" }), {
-            status: 200,
+        return new Response(JSON.stringify({ 
+            message: TEST.status === 200 ? "Successfully sent email" : "Failed to send email"
+        }), {
+            status: TEST.status,
         });
     }
     const body = await request.json();
@@ -36,17 +42,13 @@ export async function POST(request: Request) {
             },
         });
         if (response.status !== 200) {
-            console.error(response);
-            return new Response(
-                JSON.stringify({ message: "An error occured" }),
-                { status: 500 }
-            );
+            throw new Error("An error occured");
         }
         return new Response(JSON.stringify({ message: "Email sent" }), {
             status: 200,
         });
-    } catch (error) {
-        return new Response(JSON.stringify({ message: "An error occured" }), {
+    } catch (error : any) {
+        return new Response(JSON.stringify({ message: error.message }), {
             status: 500,
         });
     }

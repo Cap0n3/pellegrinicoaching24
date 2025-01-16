@@ -65,7 +65,7 @@ export default function NewsletterInput({
         if (submitStatus !== "idle") {
             const timer = setTimeout(() => {
                 handleReset();
-            }, 5000);
+            }, 4000);
 
             return () => clearTimeout(timer);
         }
