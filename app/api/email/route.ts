@@ -6,16 +6,22 @@ const EMAIL_JS_URL = "https://api.emailjs.com/api/v1.0/email/send";
 const TEST = {
     active: false, // Set to true to test fake response
     status: 200, // Set custom status code
-}
+};
 
 export async function POST(request: Request) {
     if (TEST.active) {
         await new Promise((resolve) => setTimeout(resolve, 3000));
-        return new Response(JSON.stringify({ 
-            message: TEST.status === 200 ? "Successfully sent email" : "Failed to send email"
-        }), {
-            status: TEST.status,
-        });
+        return new Response(
+            JSON.stringify({
+                message:
+                    TEST.status === 200
+                        ? "Successfully sent email"
+                        : "Failed to send email",
+            }),
+            {
+                status: TEST.status,
+            }
+        );
     }
     const body = await request.json();
     const { subject, option, fname, lname, phone, email, message } = body;
@@ -47,7 +53,7 @@ export async function POST(request: Request) {
         return new Response(JSON.stringify({ message: "Email sent" }), {
             status: 200,
         });
-    } catch (error : any) {
+    } catch (error: any) {
         return new Response(JSON.stringify({ message: error.message }), {
             status: 500,
         });

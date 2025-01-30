@@ -58,9 +58,9 @@ export default function Newsletter({
                         delay={50}
                     />
                     <p className="text-md">{paragraph}</p>
-                    <NewsletterInput 
-                        cta={cta} 
-                        placeholder={placeholder} 
+                    <NewsletterInput
+                        cta={cta}
+                        placeholder={placeholder}
                         success={success}
                         error={error}
                     />

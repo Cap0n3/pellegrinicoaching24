@@ -6,7 +6,7 @@ import {
     FaInstagram,
     FaFacebookF,
     FaYoutube,
-    FaLinkedin
+    FaLinkedin,
 } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 import WaveDivider from "./WaveDivider";
@@ -19,9 +19,7 @@ export default function Footer() {
             <WaveDivider position="top" />
             <div className="flex flex-col items-center justify-center">
                 <Link href="/">
-                    <SiteLogo
-                        size={50}
-                    />
+                    <SiteLogo size={50} />
                 </Link>
 
                 <ul className="mb-10 flex flex-col items-center justify-center gap-7 border-b-[.5px] border-gray-200 py-16 text-lg transition-all duration-500 md:flex-row md:gap-12">

@@ -60,9 +60,7 @@ export default function Navbar() {
                 <SheetContent side="left">
                     <SheetHeader>
                         <SheetTitle>
-                            <SiteLogo
-                                size={50}
-                            />
+                            <SiteLogo size={50} />
                             <span className="sr-only">{t("srLogo")}</span>
                         </SheetTitle>
                         <SheetDescription />{" "}
@@ -120,9 +118,7 @@ export default function Navbar() {
                 role="logo"
             >
                 {/* SITE LOGO */}
-                <SiteLogo
-                    size={50}
-                />
+                <SiteLogo size={50} />
                 <span className="sr-only">{t("srLogo")}</span>
             </Link>
             <nav className="ml-auto hidden gap-6 lg:flex">

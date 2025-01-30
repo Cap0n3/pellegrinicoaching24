@@ -55,22 +55,19 @@ export default function Headings({
     slide = false,
     className,
 }: HeadingsProps) {
-
     return (
         <>
-            {
-                slide ? (
-                    <Slide>
-                        <Title type={type} className={className}>
-                            {title}
-                        </Title>
-                    </Slide>
-                ) : (
+            {slide ? (
+                <Slide>
                     <Title type={type} className={className}>
                         {title}
                     </Title>
-                ) 
-            }
+                </Slide>
+            ) : (
+                <Title type={type} className={className}>
+                    {title}
+                </Title>
+            )}
         </>
     );
 }

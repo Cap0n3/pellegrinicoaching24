@@ -70,7 +70,11 @@ const PricingCard = ({
                     <span className="text-2xl font-bold">{price}</span>
                     <span className="text-sm text-neutral-400">/month</span>
                 </div>
-                {description && <span className="text-sm text-center text-neutral-400">{description}</span>}
+                {description && (
+                    <span className="text-center text-sm text-neutral-400">
+                        {description}
+                    </span>
+                )}
                 <Separator />
             </CardHeader>
             <CardContent className="pt-2">
@@ -100,9 +104,9 @@ const PricingCard = ({
     );
 };
 
-export default function Pricings({ 
+export default function Pricings({
     pricingData,
-    contrast = false 
+    contrast = false,
 }: PricingsProps) {
     const t = useTranslations("HomePage.pricings");
     const keys = ["pricing-one", "pricing-two", "pricing-three"] as const;
@@ -116,7 +120,9 @@ export default function Pricings({
         <section
             className={cn(
                 "flex w-full flex-col items-center justify-center gap-10 px-10 py-10 lg:flex-row",
-                contrast ? "bg-mp-light-beige dark:bg-gray-900" : "bg-white dark:bg-gray-800"
+                contrast
+                    ? "bg-mp-light-beige dark:bg-gray-900"
+                    : "bg-white dark:bg-gray-800"
             )}
         >
             {pricingData.map((pricing, index) => (

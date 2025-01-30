@@ -31,7 +31,7 @@ const TextAreaField = React.forwardRef<HTMLTextAreaElement, TextAreaFieldProps>(
         } = props;
 
         return (
-            <div className="w-full mb-5">
+            <div className="mb-5 w-full">
                 {label && (
                     <label
                         htmlFor={id}
@@ -58,7 +58,7 @@ const TextAreaField = React.forwardRef<HTMLTextAreaElement, TextAreaFieldProps>(
                 {errors[name] && (
                     <span
                         role="alert"
-                        className="block mt-2 text-sm text-red-500 dark:text-red-400"
+                        className="mt-2 block text-sm text-red-500 dark:text-red-400"
                     >
                         {errors[name].message}
                     </span>

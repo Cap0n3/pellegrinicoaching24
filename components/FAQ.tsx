@@ -25,10 +25,7 @@ type FAQItemProps = {
 
 function FAQItem({ index, question, answer }: FAQItemProps) {
     return (
-        <AccordionItem
-            value={`item-${index + 1}`}
-            aria-label="Accordion item"
-        >
+        <AccordionItem value={`item-${index + 1}`} aria-label="Accordion item">
             <AccordionTrigger
                 className="text-start hover:no-underline"
                 tabIndex={0}
@@ -54,7 +51,6 @@ export default function FAQSection({
     contrast = false,
     inverted = false,
 }: SectionProps) {
-
     const imageBlock = (
         <div className="order-first w-full lg:order-none lg:w-1/3 xl:w-1/2">
             {imageLink && (
@@ -86,9 +82,7 @@ export default function FAQSection({
                 >
                     <Slide className="w-full">
                         <div aria-label="FAQ section" tabIndex={0}>
-                            <h2 className="mb-4 text-2xl font-bold">
-                                {title}
-                            </h2>
+                            <h2 className="mb-4 text-2xl font-bold">{title}</h2>
                             <Accordion
                                 type="single"
                                 collapsible

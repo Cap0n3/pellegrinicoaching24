@@ -9,7 +9,9 @@ type Props = {
 };
 
 export default function SiteLogo({ size = 50 }: Props) {
-    const [logoImage, setLogoImage] = useState<string>("/images/logos/logo_black.webp");
+    const [logoImage, setLogoImage] = useState<string>(
+        "/images/logos/logo_black.webp"
+    );
     const { theme } = useTheme();
 
     useEffect(() => {

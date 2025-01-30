@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { useInView } from "motion/react"
+import { useInView } from "motion/react";
 
 type HeadingsProps = {
     title: string;
@@ -59,8 +59,8 @@ export default function AnimatedHeadings({
     delay = 100,
 }: HeadingsProps) {
     const [visibleChars, setVisibleChars] = useState(0);
-    const ref = useRef(null)
-    const isInView = useInView(ref)
+    const ref = useRef(null);
+    const isInView = useInView(ref);
 
     useEffect(() => {
         const isInitialDelay = visibleChars === 0;
@@ -90,9 +90,7 @@ export default function AnimatedHeadings({
                 {Array.from(title).map((char, index) => (
                     <span
                         key={index}
-                        className={cn(
-                            index < visibleChars ? "" : "invisible"
-                        )}
+                        className={cn(index < visibleChars ? "" : "invisible")}
                     >
                         {char}
                     </span>

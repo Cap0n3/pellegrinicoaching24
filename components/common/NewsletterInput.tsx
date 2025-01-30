@@ -7,7 +7,7 @@ import InputField from "@/components/forms/input_components/InputField";
 import { useTranslations } from "next-intl";
 import { FORM_REGEX } from "@/components/forms/formRegex";
 import AnimatedButton from "@/components/common/AnimatedButton";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,11 +20,11 @@ type NewsletterInputProps = {
     success: {
         title: string;
         message: string;
-    }
+    };
     error: {
         title: string;
         message: string;
-    }
+    };
 };
 
 interface IFormInput {
@@ -90,7 +90,7 @@ export default function NewsletterInput({
             });
 
             const result = await response.json();
-            
+
             if (response.status !== 200) {
                 throw new Error(result.message);
             }
@@ -137,42 +137,36 @@ export default function NewsletterInput({
                 />
             </form>
             <AnimatePresence>
-                {
-                    submitStatus === "success" && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: .6 }}
-                        >
-                            <Alert>
-                                <FaRegThumbsUp className="h-4 w-4" />
-                                <AlertTitle>{success.title}</AlertTitle>
-                                <AlertDescription>
-                                    {success.message}
-                                </AlertDescription>
-                            </Alert>
-                        </motion.div>
-                    )
-                }
-                {
-                    submitStatus === "error" && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: .6 }}
-                        >
-                            <Alert variant="destructive">
-                                <MdError className="h-4 w-4" />
-                                <AlertTitle>{error.title}</AlertTitle>
-                                <AlertDescription>
-                                    {error.message}
-                                </AlertDescription>
-                            </Alert>
-                        </motion.div>
-                    )
-                }
+                {submitStatus === "success" && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <Alert>
+                            <FaRegThumbsUp className="h-4 w-4" />
+                            <AlertTitle>{success.title}</AlertTitle>
+                            <AlertDescription>
+                                {success.message}
+                            </AlertDescription>
+                        </Alert>
+                    </motion.div>
+                )}
+                {submitStatus === "error" && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <Alert variant="destructive">
+                            <MdError className="h-4 w-4" />
+                            <AlertTitle>{error.title}</AlertTitle>
+                            <AlertDescription>{error.message}</AlertDescription>
+                        </Alert>
+                    </motion.div>
+                )}
             </AnimatePresence>
         </div>
     );

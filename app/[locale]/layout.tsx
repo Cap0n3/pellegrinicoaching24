@@ -9,7 +9,7 @@ import ScrollTop from "@/components/common/ScrollToTop";
 import { NextIntlClientProvider } from "next-intl";
 import { PHProvider } from "@/contexts/PosthogProvider";
 import { getMessages } from "next-intl/server";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -25,7 +25,8 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         title: "Michael Pellegrini Coaching",
-        description: "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+        description:
+            "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
         locale: "fr_FR",
         url: "https://example.com",
         images: [
@@ -39,17 +40,18 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Michael Pellegrini Coaching",
-        description: "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+        description:
+            "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
         images: [
             {
                 url: "/images/mpcoaching_og_image.webp",
                 alt: "Michael Pellegrini Coaching",
             },
-        ]
+        ],
     },
 };
 
-const PostHogPageView = dynamic(() => import('../PostHogPageView'), {
+const PostHogPageView = dynamic(() => import("../PostHogPageView"), {
     ssr: false,
 });
 
@@ -70,12 +72,12 @@ export default async function LocaleLayout({
                     <ThemeProvider
                         attribute="class"
                         enableSystem={false}
-                        themes = {['light', 'dark']}
+                        themes={["light", "dark"]}
                         disableTransitionOnChange
                     >
                         <Providers>
                             <PHProvider>
-                                <PostHogPageView /> 
+                                <PostHogPageView />
                                 <Navbar />
                                 {children}
                                 <Footer />
