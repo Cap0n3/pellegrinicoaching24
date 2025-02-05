@@ -17,16 +17,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-    title: "MP Coaching",
+    title: "MP Coaching | Coach de vie certifié à Genève",
     description:
-        "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+        "Michael Pellegrini, coach de vie certifié à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
     keywords:
-        "Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
+        "Genève, Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
     openGraph: {
         type: "website",
-        title: "Michael Pellegrini Coaching",
+        title: "Michael Pellegrini | Coach de vie certifié à Genève",
         description:
-            "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+            "Michael Pellegrini, coach de vie certifié à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
         locale: "fr_FR",
         url: "https://example.com",
         images: [
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Michael Pellegrini Coaching",
+        title: "Michael Pellegrini | Coach de vie certifié à Genève",
         description:
-            "Michael Pellegrini, coach de vie certifié, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
+            "Michael Pellegrini, coach de vie certifié à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration.",
         images: [
             {
                 url: "/images/mpcoaching_og_image.webp",
