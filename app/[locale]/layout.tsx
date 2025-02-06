@@ -19,14 +19,14 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
     title: "MP Coaching | Coach de vie certifié à Genève",
     description:
-        "Michael Pellegrini, coach de vie à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration. Certifié Coach Professionnel par l'approche Coaching RelationCare® de l'école WAKAN, fondée par David Denis Hertz, MCC, Michael allie expertise et bienveillance pour vous aider à libérer votre potentiel. Dans un environnement sûr et confidentiel, exempt de tout jugement, vous pourrez identifier vos résistances ouvrant ainsi la voie à une action plus efficace.",
+        "Michael Pellegrini, coach de vie certifié à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie.",
     keywords:
         "Genève, Coaching, Coach de vie, Développement personnel, Créativité, Inspiration, Transformation, Vie, Michael Pellegrini",
     openGraph: {
         type: "website",
         title: "Michael Pellegrini | Coach de vie certifié à Genève",
         description:
-            "Michael Pellegrini, coach de vie à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration. Certifié Coach Professionnel par l'approche Coaching RelationCare® de l'école WAKAN, fondée par David Denis Hertz, MCC, Michael allie expertise et bienveillance pour vous aider à libérer votre potentiel. Dans un environnement sûr et confidentiel, exempt de tout jugement, vous pourrez identifier vos résistances ouvrant ainsi la voie à une action plus efficace.",
+            "Michael Pellegrini, coach de vie certifié à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie.",
         locale: "fr_FR",
         url: "https://example.com",
         images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Michael Pellegrini | Coach de vie certifié à Genève",
         description:
-            "Michael Pellegrini, coach de vie à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie en puisant dans votre inspiration. Certifié Coach Professionnel par l'approche Coaching RelationCare® de l'école WAKAN, fondée par David Denis Hertz, MCC, Michael allie expertise et bienveillance pour vous aider à libérer votre potentiel. Dans un environnement sûr et confidentiel, exempt de tout jugement, vous pourrez identifier vos résistances ouvrant ainsi la voie à une action plus efficace.",
+            "Michael Pellegrini, coach de vie certifié à Genève, vous aide à libérer votre potentiel créatif et à transformer votre vie.",
         images: [
             {
                 url: "/images/mpcoaching_og_image.webp",
